@@ -370,7 +370,7 @@ body[data-rootcatid="38"] {
     height: auto;
     max-height: none;
     max-width: none; }
-  body[data-rootcatid="38"] #products_grid .col-md-9 .oe_product .oe_product_cart {
+  body[data-rootcatid="38"] .col-md-9 .oe-height-2 {
     height: 380px; }
 
 body[data-rootcatid="38"] {
