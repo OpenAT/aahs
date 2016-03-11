@@ -154,6 +154,10 @@ ul.cat_menu > li {
 .product_price b {
   font-weight: 600;
 }
+.oe_product .text-info.oe_subdescription {
+  display: none;
+  }
+
   #products_grid .product_price {
   display: none;
 }

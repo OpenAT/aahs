@@ -136,6 +136,10 @@ body[data-rootcatid="44"] {
 #products_grid .product_price {
   display: none;
 }
+  .oe_product .text-info.oe_subdescription {
+  display: none;
+  }
+
   // PRODUCT LISTINGS:
   //all nav-pills navigations
   #products_grid_before {
