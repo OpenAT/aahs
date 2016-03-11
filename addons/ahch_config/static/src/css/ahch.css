@@ -188,6 +188,15 @@ body[data-rootcatid="44"] {
 
 body[data-rootcatid="38"] {
   /*
+    a {
+      //font-family: "Droid Sans",arial,sans-serif;
+      //font-family: "Droid Sans",arial,sans-serif;
+      font-family: sans-serif,Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: $santered;
+    }
+  */
+  /*
   ul.cat_menu > li > ul > li.cat2 {
     margin-bottom: 1em;
     a {
@@ -207,10 +216,6 @@ body[data-rootcatid="38"] {
     }
   }
 */ }
-  body[data-rootcatid="38"] a {
-    font-family: sans-serif,Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: #bf2221; }
   body[data-rootcatid="38"] .fa-shopping-cart:before {
     color: #545454;
     content: "\f16b"; }
