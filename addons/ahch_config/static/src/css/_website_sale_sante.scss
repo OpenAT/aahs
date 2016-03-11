@@ -2,7 +2,9 @@
 body[data-rootcatid="38"] {
 
   a {
-    font-family: "Droid Sans",arial,sans-serif;
+    //font-family: "Droid Sans",arial,sans-serif;
+    //font-family: "Droid Sans",arial,sans-serif;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: $santered;
   }
@@ -29,7 +31,8 @@ body[data-rootcatid="38"] {
   #wsd-checkout-box h4,
   #wsd-checkout-box h5,
   #wsd-checkout-box p, {
-    font-family: Arial, Helvetica, sans-serif;
+    //font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
   }
   #wsd-checkout-box h1 {
     font-size: 1.5em;
@@ -46,9 +49,10 @@ body[data-rootcatid="38"] {
     padding-bottom: 30px;
   }
   // SHOP CATEGORIES NAVIGATION
-  ul.cat_menu li > ul > li {
+  ul.cat_menu li > ul > li > ul > li {
     font-size: 14.3999996185303px;
     line-height: 1em;
+    font-weight: 300;
     a {
       color: $santered;
       font-size: 14.3999996185303px;
@@ -59,26 +63,34 @@ body[data-rootcatid="38"] {
       padding-left: 0;
     }
   }
+
+ul {
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
 ul.cat_menu > li {
     color: #868686;
     font: 10px/1.2 arial,sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
-    a {
+    > a {
       margin-bottom: 12px;
+      text-transform: uppercase;
+
     }
 }
 
   ul.cat_menu > li > ul {
-border: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     background-color: #f9f9f9;
     padding-top: 10px;
   }
 
   ul.cat_menu > li > ul > li {
-    margin-bottom: 2em;
-
+    margin-top: 0.5em;
   }
+
   // Alle Artikel
   /*
   ul.cat_menu > li > ul > li.cat2 {
@@ -113,20 +125,20 @@ border: 1px solid #ddd;
   ul.cat_menu > li > ul > li {
       > a {
       color: $santeblack;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      text-transform: uppercase;
-      font-weight: 300;
+      //font-family: 'Droid Sans',Arial, Helvetica, sans-serif;
+      font-family: sans-serif,Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weigth: bold;
       padding-left: 0;
-      padding-bottom: 0.5em;
-      margin: 0 0 1em 0;
-}
+      padding-bottom: 1em;
+      }
   }
 
   // PRODUCT LISTINGS:
   //all nav-pills navigations
   #products_grid_before {
-    font-family: Arial, Helvetica, sans-serif;
+    //font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
     font-size: 14.3999996185303px;
   }
   #products_grid_before .nav-pills > li.active > a,

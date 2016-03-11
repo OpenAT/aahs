@@ -208,7 +208,7 @@ body[data-rootcatid="38"] {
   }
 */ }
   body[data-rootcatid="38"] a {
-    font-family: "Droid Sans",arial,sans-serif;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: #bf2221; }
   body[data-rootcatid="38"] .fa-shopping-cart:before {
@@ -228,7 +228,7 @@ body[data-rootcatid="38"] {
   body[data-rootcatid="38"] #wsd-checkout-box h4,
   body[data-rootcatid="38"] #wsd-checkout-box h5,
   body[data-rootcatid="38"] #wsd-checkout-box p {
-    font-family: Arial, Helvetica, sans-serif; }
+    font-family: sans-serif,Arial, Helvetica, sans-serif; }
   body[data-rootcatid="38"] #wsd-checkout-box h1 {
     font-size: 1.5em; }
   body[data-rootcatid="38"] .oe_product.oe_grid:hover {
@@ -236,29 +236,34 @@ body[data-rootcatid="38"] {
     box-shadow: 2px 2px 12px #a0a0a0; }
   body[data-rootcatid="38"] .oe_product section {
     padding-bottom: 30px; }
-  body[data-rootcatid="38"] ul.cat_menu li > ul > li {
+  body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li {
     font-size: 14.3999996185303px;
-    line-height: 1em; }
-    body[data-rootcatid="38"] ul.cat_menu li > ul > li a {
+    line-height: 1em;
+    font-weight: 300; }
+    body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li a {
       color: #bf2221;
       font-size: 14.3999996185303px;
       padding: 0;
       padding-bottom: 6px; }
-    body[data-rootcatid="38"] ul.cat_menu li > ul > li ul.nav-hierarchy {
+    body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li ul.nav-hierarchy {
       padding-left: 0; }
+  body[data-rootcatid="38"] ul {
+    padding-bottom: 10px;
+    padding-left: 5px; }
   body[data-rootcatid="38"] ul.cat_menu > li {
     color: #868686;
     font: 10px/1.2 arial,sans-serif;
-    font-weight: bold;
-    text-transform: uppercase; }
-    body[data-rootcatid="38"] ul.cat_menu > li a {
-      margin-bottom: 12px; }
+    font-weight: bold; }
+    body[data-rootcatid="38"] ul.cat_menu > li > a {
+      margin-bottom: 12px;
+      text-transform: uppercase; }
   body[data-rootcatid="38"] ul.cat_menu > li > ul {
     border: 1px solid #ddd;
+    border-radius: 5px;
     background-color: #f9f9f9;
     padding-top: 10px; }
   body[data-rootcatid="38"] ul.cat_menu > li > ul > li {
-    margin-bottom: 2em; }
+    margin-top: 0.5em; }
   body[data-rootcatid="38"] #products_grid_before .nav-pills > li.cat0.active > a,
   body[data-rootcatid="38"] #products_grid_before .nav-pills > li.cat0.active > a:hover,
   body[data-rootcatid="38"] #products_grid_before .nav-pills > li.cat0.active > a:focus {
@@ -267,15 +272,13 @@ body[data-rootcatid="38"] {
     font-weight: 300; }
   body[data-rootcatid="38"] ul.cat_menu > li > ul > li > a {
     color: #545454;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 300;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weigth: bold;
     padding-left: 0;
-    padding-bottom: 0.5em;
-    margin: 0 0 1em 0; }
+    padding-bottom: 1em; }
   body[data-rootcatid="38"] #products_grid_before {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
     font-size: 14.3999996185303px; }
   body[data-rootcatid="38"] #products_grid_before .nav-pills > li.active > a,
   body[data-rootcatid="38"] #products_grid_before .nav-pills > li.active > a:hover,
@@ -304,9 +307,7 @@ body[data-rootcatid="38"] {
     margin-top: 0.7em; }
 
 body[data-rootcatid="38"] {
-  font-family: 'Droid Sans',arial,sans-serif;
-  font: 13px/20px arial,sans-serif;
-  font-size: 14.6000003814697px;
+  font-family: sans-serif,Arial, Helvetica, sans-serif;
   line-height: 1.618em;
   color: #333;
   margin: 0;
@@ -341,7 +342,7 @@ p {
   padding: 0; }
 
 a {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif,Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #d70f41; }
 
