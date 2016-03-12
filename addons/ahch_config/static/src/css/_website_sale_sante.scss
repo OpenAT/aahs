@@ -162,6 +162,7 @@ ul.cat_menu > li {
   .product_price b {
     float: right;
   }
+
   #products_grid .product_price {
     //display: none;
     position: absolute;
@@ -174,8 +175,9 @@ ul.cat_menu > li {
   .oe_list .text-info.oe_subdescription {
     display: block;
   }
-  #website_sale_donate .oe_price_h4 {
-    margin-right: 25%;
+  #website_sale_donate .oe_price_h4 > b {
+    margin-right: auto;
+    float: none;
   }
 
   // PRODUCT LISTINGS:
@@ -237,6 +239,18 @@ ul.cat_menu > li {
     }
   }
 
+    .input-group-lg .input-group-addon {
+      font-size: 14px !important;
+      height: 35px;
+      padding: 0;
+      padding-right: 3px;
+      padding-left: 3px;
+
+  }
+  .input-group-lg > .form-control {
+    height: 35px;
+    padding:0;
+  }
 #products_grid table {
   border-spacing: 20px 20px;
 }

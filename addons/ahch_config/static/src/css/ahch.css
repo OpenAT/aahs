@@ -181,8 +181,18 @@ body[data-rootcatid="44"] {
     display: block; }
   body[data-rootcatid="44"] .oe_list.oe_product section {
     height: auto; }
-  body[data-rootcatid="44"] #website_sale_donate .oe_price_h4 {
-    margin-right: 25%; }
+  body[data-rootcatid="44"] #website_sale_donate .oe_price_h4 > b {
+    margin-right: auto;
+    float: none; }
+  body[data-rootcatid="44"] .input-group-lg .input-group-addon {
+    font-size: 14px !important;
+    height: 35px;
+    padding: 0;
+    padding-right: 3px;
+    padding-left: 3px; }
+  body[data-rootcatid="44"] .input-group-lg > .form-control {
+    height: 35px;
+    padding: 0; }
   body[data-rootcatid="44"] #products_grid_before {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14.3999996185303px; }
@@ -351,8 +361,9 @@ body[data-rootcatid="38"] {
     display: none; }
   body[data-rootcatid="38"] .oe_list .text-info.oe_subdescription {
     display: block; }
-  body[data-rootcatid="38"] #website_sale_donate .oe_price_h4 {
-    margin-right: 25%; }
+  body[data-rootcatid="38"] #website_sale_donate .oe_price_h4 > b {
+    margin-right: auto;
+    float: none; }
   body[data-rootcatid="38"] #products_grid_before {
     font-family: sans-serif,Arial, Helvetica, sans-serif;
     font-size: 14.3999996185303px; }
@@ -387,6 +398,15 @@ body[data-rootcatid="38"] {
     height: 32px; }
   body[data-rootcatid="38"] .oe_website_sale h1, body[data-rootcatid="38"] .oe_website_sale h2, body[data-rootcatid="38"] .oe_website_sale h3, body[data-rootcatid="38"] .oe_website_sale h4, body[data-rootcatid="38"] .oe_website_sale h5, body[data-rootcatid="38"] .oe_website_sale h6 {
     margin-top: 0.7em; }
+  body[data-rootcatid="38"] .input-group-lg .input-group-addon {
+    font-size: 14px !important;
+    height: 35px;
+    padding: 0;
+    padding-right: 3px;
+    padding-left: 3px; }
+  body[data-rootcatid="38"] .input-group-lg > .form-control {
+    height: 35px;
+    padding: 0; }
   body[data-rootcatid="38"] #products_grid table {
     border-spacing: 20px 20px; }
   body[data-rootcatid="38"] .oe_product .oe_product_image img {

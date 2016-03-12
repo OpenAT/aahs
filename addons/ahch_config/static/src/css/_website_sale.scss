@@ -143,6 +143,7 @@ body[data-rootcatid="44"] {
     bottom: 0;
     width: calc(100% - 25px);
   }
+
   .oe_product .text-info.oe_subdescription {
     display: none;
   }
@@ -154,10 +155,23 @@ body[data-rootcatid="44"] {
     height: auto;
   }
 
-    #website_sale_donate .oe_price_h4 {
-    margin-right: 25%;
+    #website_sale_donate .oe_price_h4 > b {
+    margin-right: auto;
+    float: none;
   }
 
+      .input-group-lg .input-group-addon {
+      font-size: 14px !important;
+      height: 35px;
+      padding: 0;
+      padding-right: 3px;
+      padding-left: 3px;
+
+  }
+  .input-group-lg > .form-control {
+    height: 35px;
+    padding:0;
+  }
   // PRODUCT LISTINGS:
   //all nav-pills navigations
   #products_grid_before {
