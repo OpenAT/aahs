@@ -45,8 +45,12 @@ body[data-rootcatid="38"] {
     border: 1px solid rgb(41, 38, 38);
     box-shadow: 2px 2px 12px rgb(160, 160, 160);
   }
-  .oe_product section {
-    padding-bottom: 30px;
+    .oe_product section {
+    //bottom: 78px;
+    height:165px;
+  }
+  .oe_list.oe_product section {
+    height: auto;
   }
   // SHOP CATEGORIES NAVIGATION
   ul.cat_menu li > ul > li > ul > li {
@@ -154,13 +158,25 @@ ul.cat_menu > li {
 .product_price b {
   font-weight: 600;
 }
-.oe_product .text-info.oe_subdescription {
-  display: none;
-  }
 
+  .product_price b {
+    float: right;
+  }
   #products_grid .product_price {
-  display: none;
-}
+    //display: none;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 25px);
+  }
+  .oe_product .text-info.oe_subdescription {
+    display: none;
+  }
+  .oe_list .text-info.oe_subdescription {
+    display: block;
+  }
+  #website_sale_donate .oe_price_h4 {
+    margin-right: 25%;
+  }
 
   // PRODUCT LISTINGS:
   //all nav-pills navigations
@@ -204,6 +220,14 @@ ul.cat_menu > li {
   }
 
   // CHECKOUT PAGE
+    #wsd-checkout-box > div > div.panel-body.text-center > form > div > ul > li > ul > li > label {
+    margin-left: 35% !important;
+    display: flex !Important;
+    font-weight: normal;
+  }
+  label.radio input[type="radio"]:checked {
+    color: $red !important;
+  }
   #wsd_checkout label {
     height: 32px;
   }

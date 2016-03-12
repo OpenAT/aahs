@@ -36,7 +36,8 @@ body[data-rootcatid="44"] {
     box-shadow: 2px 2px 12px rgb(160, 160, 160);
   }
   .oe_product section {
-    padding-bottom: 30px;
+    //bottom: 78px;
+    height:165px;
   }
   // SHOP CATEGORIES NAVIGATION
   ul.cat_menu li > ul > li {
@@ -133,15 +134,28 @@ body[data-rootcatid="44"] {
     font-weight: normal;
   }
 
+  .product_price b {
+    float: right;
+  }
   #products_grid .product_price {
-    display: none;
+    //display: none;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 25px);
   }
   .oe_product .text-info.oe_subdescription {
     display: none;
   }
 
-  .oe_list .oe_subdescription {
-    display: inline;
+  .oe_list .text-info.oe_subdescription {
+    display: block;
+  }
+  .oe_list.oe_product section {
+    height: auto;
+  }
+
+    #website_sale_donate .oe_price_h4 {
+    margin-right: 25%;
   }
 
   // PRODUCT LISTINGS:
@@ -185,6 +199,14 @@ body[data-rootcatid="44"] {
   }
 
   // CHECKOUT PAGE
+  #wsd-checkout-box > div > div.panel-body.text-center > form > div > ul > li > ul > li > label {
+    margin-left: 35% !important;
+    display: flex !Important;
+    font-weight: normal;
+  }
+  input[type="radio"]:checked {
+    color: $red !important;
+}
   #wsd_checkout label {
     height: 32px;
   }
