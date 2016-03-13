@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+       <record model="ir.ui.view" id="company_form_view">
+            <field name="name">res.company.form.inherit.bvr</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="BVR Data">
+                        <group col="2" colspan="6">
+                            <field name="bvr_address_left_top_horz"/>
+                            <field name="bvr_address_left_top_vert"/>
+                            <field name="bvr_address2_left_top_vert"/>
+                            <field name="bvr_accountnr_left_delta_horz"/>
+                            <field name="bvr_accountnr2_left_delta_vert"/>
+                            <field name="bvr_ammount_delta_horz"/>
+                            <field name="bvr_ammount_left_delta_vert"/>
+                            <field name="bvr_ammountdec_left_delta_vert"/>
+                            <field name="bvr_ammount_right_delta_vert"/>
+                            <field name="bvr_ammountdec_right_delta_vert"/>
+                            <field name="bvr_address_left_bottom_horz"/>
+                            <field name="bvr_address_left_bottom_vert"/>
+                            <field name="bvr_address2_left_bottom_vert"/>
+                            <field name="bvr_esr_left_delta_horz"/>
+                            <field name="bvr_esr_left_delta_vert"/>
+                        </group>
+                        <group col="4" colspan="4">
+                            <field name="bvr_scan_line_font_size"/>
+                            <field name="bvr_scan_line_letter_spacing"/>
+                            <field name="bvr_address_right_bottom_horz"/>
+                            <field name="bvr_address_right_bottom_vert"/>
+                            <field name="bvr_esr_right_delta_horz"/>
+                            <field name="bvr_esr_right_delta_vert"/>
+                        </group>
+                        <group colspan="6">
+                            <field name="bvr_kodierline_delta_vert"/>
+                            <field name="bvr_kodierline_delta_horz"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

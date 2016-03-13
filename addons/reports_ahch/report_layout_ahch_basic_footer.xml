@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- <template id="external_layout_header" inherit_id="report.external_layout_header"> -->
+        <!-- <xpath expr="//div" position="replace"> -->
+    <template id="report_layout_ahch_basic_footer">
+        <t t-if ="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"/>
+            <t t-set="customer" t-value="o.partner_id"/>
+        </t>
+            <!-- <div class="footer" style="padding:0; margin:0; position: absolute; top: 200mm;"> -->
+            <div class="footer" style="position: absolute; top: 75mm;">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <ul t-if="not company.custom_footer" class="list-inline">
+                        <li t-if="company.phone">Phone: <span t-field="company.phone"/></li>
+
+                        <li t-if="company.fax and company.phone">&amp;bull;</li>
+                        <li t-if="company.fax">Fax: <span t-field="company.fax"/></li>
+
+                        <li t-if="company.email">&amp;bull;</li>
+                        <li t-if="company.email">Email: <span t-field="company.email"/></li>
+
+                        <li t-if="company.website">&amp;bull;</li>
+                        <li t-if="company.website">Website: <span t-field="company.website"/></li><br/>
+
+                        <li t-if="company.bank_ids.acc_number">IBAN: <span t-field="company.bank_ids.acc_number"/></li>
+                        <li t-if="company.bank_ids.acc_number">BIC : <span t-field="company.bank_ids.bank_bic"/></li>
+                    </ul>
+
+                    <t t-if="company.custom_footer">
+                        <span t-raw="company.rml_footer"/>
+                    </t>
+                </div>
+            </div>   <!-- ende vom Footer -->
+            <!-- </xpath> -->
+        </template>
+    </data>
+</openerp>

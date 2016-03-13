@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <!-- form view for company -->
+
+<record id="view_company_form_ce" model="ir.ui.view">
+    <field name="name">report.customization.company.form</field>
+    <field name="model">res.company</field>
+    <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="custom_footer" position="before">
+                <field name="logo_report_dd" widget="image"/>
+                <field name="website_report_dd"/>
+                <field name="email_report_dd"/>
+            </field>
+        </field>
+</record>
+
+        <record model="ir.ui.view" id="view_partner_bank_chf_extension">
+      <field name="name">res.partner_bank.form.chf_extension</field>
+      <field name="model">res.partner.bank</field>
+      <field name="inherit_id" ref="base.view_partner_bank_form"/>
+      <field name="arch" type="xml">
+        <group name="bank" position="after">
+          <group string="BVR options">
+            <field name="bvr_customer_number"/>
+            <field name="pf_acc_num"/>
+          </group>
+        </group>
+      </field>
+    </record>
+</data>
+</openerp>

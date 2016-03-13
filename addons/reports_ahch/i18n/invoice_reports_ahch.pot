@@ -1,0 +1,443 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* reports_ahch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-24 10:28+0000\n"
+"PO-Revision-Date: 2016-02-24 10:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+msgid "&bull;"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Amount"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Article number"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Aus Bestandsgründen kann es bei Gratisartikeln zu Mengenabweichungen zwischen Ihrer Bestellung und\n"
+"                                der Lieferung kommen. Bitte verwenden Sie für die Bezahlung der Rechnung immer den orangenen Einzahlungsschein"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+#: view:website:reports_ahch.report_layout_ahch_slip_footer
+msgid "BIC :"
+msgstr ""
+
+#. module: reports_ahch
+#: view:res.partner.bank:reports_ahch.view_partner_bank_chf_extension
+msgid "BVR options"
+msgstr ""
+
+#. module: reports_ahch
+#: model:ir.model,name:reports_ahch.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr ""
+
+#. module: reports_ahch
+#: field:res.partner.bank,bvr_customer_number:0
+msgid "Bank BVR/ESR adherent number"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Barcode"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Base"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Cancelled Invoice"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Commitment Date"
+msgstr ""
+
+#. module: reports_ahch
+#: model:ir.model,name:reports_ahch.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Customer Address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Customer Code:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Date Ordered:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Date Req."
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Delivery Address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Description"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Destination"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Disc.(%)"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Discount (%)"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+#: view:website:reports_ahch.report_layout_ahch_saint_header
+msgid "Email:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+#: view:website:reports_ahch.report_layout_ahch_saint_header
+msgid "Fax:"
+msgstr ""
+
+#. module: reports_ahch
+#: field:res.company,logo_report_dd:0
+msgid "Header Image"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+#: view:website:reports_ahch.report_layout_ahch_slip_footer
+msgid "IBAN:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_saint_header
+msgid "Internet:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Invoice"
+msgstr ""
+
+#. module: reports_ahch
+#: model:ir.actions.report.xml,name:reports_ahch.report_invoice_ahch
+msgid "Invoice Report AHCH"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Invoice address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Invoice and shipping address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Net Price"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Order (Origin)"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Order Date:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Order N°"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Our Order Reference:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "PRO-FORMA"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+msgid "Page:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Payment Term:"
+msgstr ""
+
+#. module: reports_ahch
+#: report:addons/reports_ahch/examples/bvr.mako:198
+msgid "Payment slip for:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+#: view:website:reports_ahch.report_layout_ahch_saint_header
+msgid "Phone:"
+msgstr ""
+
+#. module: reports_ahch
+#: field:res.partner.bank,pf_acc_num:0
+msgid "Postfinance Account Number"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Price"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Product"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Purchase Order Confirmation N°"
+msgstr ""
+
+#. module: reports_ahch
+#: model:ir.actions.report.xml,name:reports_ahch.report_picking_ahch
+msgid "Purchaseorder Report AHCH"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Qty"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.picking_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Quantity"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Quotation Date:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Quotation N°"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Refund"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Request for Quotation N°"
+msgstr ""
+
+#. module: reports_ahch
+#: model:ir.actions.report.xml,name:reports_ahch.report_saleorder_ahch
+msgid "Saleorder Report AHCH"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Salesperson:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Shipping address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_saint_header
+msgid "Shop"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Source"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "State"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Stock"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Supplier Address:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Supplier Invoice"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Supplier Refund"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Tax"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Taxes"
+msgstr ""
+
+#. module: reports_ahch
+#: help:res.company,logo_report_dd:0
+msgid "This field holds the image used for the logo on the prints, limited to 1024x1024px"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Total"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Total Without Taxes"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Unit Price"
+msgstr ""
+
+#. module: reports_ahch
+#: field:res.company,email_report_dd:0
+msgid "Use Second Email Address printed at Header in Report"
+msgstr ""
+
+#. module: reports_ahch
+#: help:res.company,website_report_dd:0
+msgid "Use Website Address displayed at Header"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+#: view:website:reports_ahch.purchaseorder_ahch_document
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "VAT:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Validated By:"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.picking_ahch_document
+msgid "Warehouse Address:"
+msgstr ""
+
+#. module: reports_ahch
+#: field:res.company,website_report_dd:0
+msgid "Website 2 Header Report"
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.report_layout_ahch_basic_footer
+msgid "Website:"
+msgstr ""
+
+#. module: reports_ahch
+#: help:res.partner.bank,bvr_customer_number:0
+msgid "Your Bank adherent number to be printed in references of your BVR/ESR. This is not a postal account number."
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.purchaseorder_ahch_document
+msgid "Your Order Reference"
+msgstr ""
+
+#. module: reports_ahch
+#: help:res.partner.bank,pf_acc_num:0
+msgid "Your PF Account."
+msgstr ""
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Your Reference:"
+msgstr ""
+
