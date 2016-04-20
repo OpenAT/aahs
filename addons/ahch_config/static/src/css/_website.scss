@@ -15,6 +15,20 @@ body[data-rootcatid="44"] {
     padding: 0;
 }
 
+@media (min-width: 959px) {
+.col-md-3 {
+  width: 25% !important;
+  float: left !important;
+}
+}
+
+@media (min-width: 959px) {
+.col-md-9 {
+  width: 75% !important;
+  float: left !important;
+}
+}
+
 // Disabled by mike
 //footer {
 //    visibility: hidden;

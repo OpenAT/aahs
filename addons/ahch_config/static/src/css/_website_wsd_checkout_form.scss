@@ -1,0 +1,137 @@
+/* Checkout Page neu BEGIN */
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-name='ogonedadi-submit-button'] {
+    max-width: 100%;
+}
+
+#payment_method {
+  .btn-primary {
+    float: right;
+  }
+}
+#wsd_checkout_steps_header {
+  display: none;
+}
+
+#wsd_checkout_form {
+  font-size: 15px;
+  padding: 0 15px 15px;
+  input, {
+    /*border-radius: 0;*/
+    /*height: 46px;*/
+  }
+  label {
+    font-weight: normal;
+    /*display: none;*/
+  }
+  .form-control-feedback {
+    top: 27px !important;
+  }
+  .amount_title {
+    display: none;
+  }
+}
+
+#wsd_checkout_form #payment_method {
+  margin-bottom: 40px;
+
+  .tab-content {
+    border: 1px solid #ddd;
+    border-top: none;
+    max-width: 530px;
+    margin: auto;
+  }
+
+  .nav-tabs {
+    text-align: center;
+    > li {
+      float: none;
+      img {
+        /*display: none !important;*/
+      }
+    }
+  }
+
+  .nav {
+    > li {
+      display: inline-block;
+    }
+  }
+}
+#payment_method {
+  .nav-tabs > li > a {
+    border-radius: 0px;
+    color: inherit;
+  }
+
+  .nav-tabs > li.active > a, .nav > li > a:hover, .nav > li > a:focus {
+    background: rgba(211, 211, 211, 0.15);
+    color: $red;
+    border-bottom: 0;
+  }
+
+  .nav-tabs {
+    text-align: left;
+        border-bottom: 0;
+  }
+
+  .tab-content {
+    /*height: auto !important;*/
+    padding: 20px;
+    max-width: none;
+    background: rgba(211, 211, 211, 0.15);
+    margin: 0 auto 40px;
+  }
+  .tab-pane {
+    /*background: rgba(211, 211, 211, 0.15);*/
+  }
+  .tab-content:focus {
+  border: 1px solid #ddd;
+  }
+}
+
+.wsd_opc_delivery .delivery_title {
+  margin-bottom: 20px;
+  background: rgba(211, 211, 211, 0.15);
+  h3 {
+        font-size: 20px;
+  }
+}
+.checkout_title,
+.payment_title {
+  background: rgba(211, 211, 211, 0.15);
+  padding: 10px;
+  font-size: 20px;
+  position: relative;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  h3 {
+    margin-bottom: 0 !important;
+    font-weight: bold;
+    // font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+/*
+.checkout_title:before,
+#payment_method .col-lg-12:first-child:before {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 48px;
+  background: white;
+  content: ' ';
+  left: 10px;
+  top: 9px;
+}
+*/
+
+#wsd_pp_auto_submit_form > form > button {
+  max-width: 100%;
+}
+
+/* Checkout Page neu ENDE */

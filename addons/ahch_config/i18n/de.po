@@ -97,7 +97,7 @@ msgstr "Zurück zum Warenkorb"
 #: view:website:website_sale.confirmation
 #: view:website:website_sale.payment
 msgid "Review Order"
-msgstr "Bestellung überprüfen"
+msgstr "Artikel überprüfen"
 
 #. module: website_sale
 #: view:website:website_sale.cart

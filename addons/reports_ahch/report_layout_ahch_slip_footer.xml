@@ -31,7 +31,7 @@
                         BIC : <span t-field="company.bank_ids.bank_bic"/>
                     </div>
                     <div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 20mm">
-                        <span t-field="company.bank_ids.bvr_customer_number"/>
+                        <span t-field="company.bank_ids.esr_customer_number"/>
                     </div>
                     <div style="font-family: 'Helvetica'; font-size:9pt; position: absolute; top: 10mm; left: 60mm; line-height: 1.2em;">
                         <span t-field="company.name"/><br/>
@@ -44,7 +44,7 @@
                         BIC : <span t-field="company.bank_ids.bank_bic"/>
                     </div>
                     <div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 82mm">
-                        <span t-field="company.bank_ids.bvr_customer_number"/>
+                        <span t-field="company.bank_ids.esr_customer_number"/>
                     </div>
                     <t t-if="'amount_total' in o.fields_get()">
                         <t t-set="intamount" t-value="'{0:,.0f}'.format(int(o.amount_total))"/>
@@ -76,9 +76,13 @@
                     <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(48 + company.bvr_ammount_delta_horz or 0) + 'mm; left: ' + str(105 + company.bvr_ammount_right_delta_vert or 0) + 'mm; width:10mm; text-align: left;'">
                         <span t-esc="decamount"/>
                     </div>
-
+                    <t t-if="o.payment_tx_id and o.payment_tx_id.esr_reference_number">
+                        <t t-set="esr_reference_number_formatted" t-value="''.join(l + ' ' * (n %5 == 1) for n, l in enumerate(o.payment_tx_id.esr_reference_number))"/>
+                    </t>
                     <div style="font-size:10px; font-family: 'OCR-B'; position: absolute; top: 60mm; text-align:left;">
-                        <span t-field="company.company_registry"/><br/>
+                        <t t-if="o.payment_tx_id and o.payment_tx_id.esr_reference_number">
+                            <span t-raw="esr_reference_number_formatted"/><br/>
+                        </t>
                     </div>
                     <div style="font-family: 'Helvetica'; font-size:8,04pt; position: absolute; top: 65mm; font-size:8pt; text-align:left;">
                         <span t-field="customer.name"/><br/>
@@ -88,7 +92,9 @@
                     </div>
                     <div t-att-style="'font-family: OCR-B; font-size:11.04pt; position: absolute; top: ' + str(32 + company.bvr_esr_right_delta_horz or 0) + 'mm; left: ' + str(115 + company.bvr_esr_right_delta_vert or 0) + 'mm; width: 84mm; text-align: right;'">
                     <!-- <div style="font-size:11,04pt; text-align:right; font-family: 'OCR-B'; position: absolute; width: 84mm; top:32mm; left: 115mm;"> -->
-                        <span t-field="company.company_registry"/><br/>
+                        <t t-if="o.payment_tx_id and o.payment_tx_id.esr_reference_number">
+                            <span t-esc="esr_reference_number_formatted"/><br/>
+                        </t>
                     </div>
                     <div  style="font-family: 'Helvetica'; font-size:11,04pt; position: absolute; top: 48mm; left: 120mm;">
                         <span t-field="customer.name"/><br/>
@@ -96,10 +102,13 @@
                         <span t-field="customer.zip"/>
                         <span t-field="customer.city"/>
                     </div>
-                    <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(85 + company.bvr_kodierline_delta_horz or 0) + 'mm; left: ' + str(65 + company.bvr_kodierline_delta_vert or 0) + 'mm; text-align: left;'">
+                    <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(85 + company.bvr_kodierline_delta_horz or 0) + 'mm; left: ' + str(60 + company.bvr_kodierline_delta_vert or 0) + 'mm; text-align: left;'">
                     <!-- <div style="position: absolute; top: 85mm; left: 65mm; font-size:12pt; text-align:left; font-family: 'OCR-B';"> -->
                         <t t-if="'amount_total' in o.fields_get()">
-                            01<span t-raw="'{0:08d}'.format(int(o.amount_total))"/><span t-esc="decamount"/>4><span t-esc="(company.company_registry).replace(' ', '')"/>+ <span t-esc="(company.bank_ids.bvr_customer_number).replace('-', '')"/>
+                            <!--01<span t-raw="'{0:08d}'.format(int(o.amount_total))"/><span t-esc="decamount"/>4><span t-esc="(company.company_registry).replace(' ', '')"/>+ <span t-esc="(company.bank_ids.esr_customer_number).replace('-', '')"/>-->
+                            <t t-if="o.payment_tx_id and o.payment_tx_id.esr_reference_number">
+                                <span t-field="o.payment_tx_id.esr_code_line"/>
+                            </t>
                         </t>
                     </div>
              </div>   <!-- ende vom Footer -->
