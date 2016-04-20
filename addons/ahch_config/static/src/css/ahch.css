@@ -131,6 +131,9 @@ body[data-rootcatid="44"] {
     box-shadow: 2px 2px 12px #a0a0a0; }
   body[data-rootcatid="44"] .oe_product section {
     height: 165px; }
+  @media screen and (max-width: 768px) {
+    body[data-rootcatid="44"] .oe_product section {
+      height: auto; } }
   body[data-rootcatid="44"] ul.cat_menu li > ul > li {
     font-size: 14.3999996185303px;
     line-height: 1em; }

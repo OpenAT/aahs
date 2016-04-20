@@ -39,6 +39,14 @@ body[data-rootcatid="44"] {
     //bottom: 78px;
     height:165px;
   }
+
+  @media screen and (max-width: 768px) {
+    .oe_product {
+      section {
+        height: auto;
+      }
+    }
+  }
   // SHOP CATEGORIES NAVIGATION
   ul.cat_menu li > ul > li {
     font-size: 14.3999996185303px;
