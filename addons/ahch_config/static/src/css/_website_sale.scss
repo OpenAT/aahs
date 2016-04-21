@@ -46,6 +46,12 @@ body[data-rootcatid="44"] {
         height: auto;
       }
     }
+
+    #products_grid {
+      .oe_product.oe_list {
+        height: auto;
+      }
+    }
   }
   // SHOP CATEGORIES NAVIGATION
   ul.cat_menu li > ul > li {

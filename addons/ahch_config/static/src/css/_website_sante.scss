@@ -1,48 +1,72 @@
 
 
 body[data-rootcatid="38"] {
-    //font-family: 'Droid Sans',arial,sans-serif;
-    font-family: sans-serif,Arial, Helvetica, sans-serif;
-    line-height: 1.618em;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+  //font-family: 'Droid Sans',arial,sans-serif;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  line-height: 1.618em;
+  color: #333;
+  margin: 0;
+  padding: 0;
 
-// Disabled by mike
-//footer {
-//    visibility: hidden;
-//}
+  // Disabled by mike
+  //footer {
+  //    visibility: hidden;
+  //}
 
-h1, h2, h3, h4, h5, h6 {
+  @media screen and (max-width: 768px) {
+    .oe_product {
+      section {
+        height: auto;
+      }
+    }
+
+    #products_grid {
+      .oe_product.oe_list {
+        height: auto;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
-    margin:0 0 0.809em 0;
+    margin: 0 0 0.809em 0;
     line-height: 1.2em;
-}
+  }
 
-h4{
-    font-family: 18px/22px 'Droid Sans',arial,sans-serif
-}
+  h4 {
+    font-family: 18px/22px 'Droid Sans', arial, sans-serif
+  }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.6em; }
-h3 { font-size: 1.3em; }
-h4 { font-size: 1.1em; margin-bottom: 0.125em; padding: 0;}
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1.1em;
+    margin-bottom: 0.125em;
+    padding: 0;
+  }
 
-p {
+  p {
     font-size: 1em;
     line-height: 1.518em;
     margin: 0 0 1.618em 0;
     padding: 0;
-}
+  }
 
-a {
-    font-family: sans-serif,Arial, Helvetica, sans-serif;
+  a {
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: $red;
-}
+  }
 
-// COLOURS
-.text-primary {
+  // COLOURS
+  .text-primary {
     color: $red;
+  }
 }
