@@ -1,8 +1,4 @@
 
-.container {
-  width: 100%;
-  max-width: 960px;
-}
 
 
 body[data-rootcatid="38"] {
@@ -13,14 +9,19 @@ body[data-rootcatid="38"] {
   margin: 0;
   padding: 0;
 
-@media (min-width: 959px) {
+  .container {
+  width: 100%;
+  max-width: 860px;
+}
+
+@media (min-width: 859px) {
 .col-md-3 {
   width: 25% !important;
   float: left !important;
 }
 }
 
-@media (min-width: 959px) {
+@media (min-width: 859px) {
 .col-md-9 {
   width: 75% !important;
   float: left !important;
