@@ -16,14 +16,14 @@ body[data-rootcatid="44"] {
 }
 
 @media (min-width: 959px) {
-.col-md-3 {
+#products_grid_before .col-md-3 {
   width: 25% !important;
   float: left !important;
 }
 }
 
 @media (min-width: 959px) {
-.col-md-9 {
+#products_grid .col-md-9 {
   width: 75% !important;
   float: left !important;
 }
