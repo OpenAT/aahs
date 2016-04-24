@@ -9,19 +9,20 @@ body[data-rootcatid="38"] {
   margin: 0;
   padding: 0;
 
-  .container {
-    width: 100% !important;
-    max-width: 860px !important;
+    .container {
+    width: 100%;
+    max-width: 860px;
+  }
 
-    @media (min-width: 859px) {
-      #products_grid_before .col-md-3 {
+@media (min-width: 859px) {
+      .col-md-3 {
         width: 25% !important;
         float: left !important;
       }
     }
 
-    @media (min-width: 859px) {
-      #products_grid .col-md-9 {
+@media (min-width: 859px) {
+      .col-md-9 {
         width: 75% !important;
         float: left !important;
       }
@@ -89,4 +90,3 @@ body[data-rootcatid="38"] {
   .text-primary {
     color: $red;
   }
-}
