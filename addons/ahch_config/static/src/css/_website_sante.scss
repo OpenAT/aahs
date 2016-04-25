@@ -15,10 +15,13 @@ body[data-rootcatid="38"] {
   }
 
 @media (min-width: 859px) {
-      .col-md-3 {
+      .col-md-3, {
         width: 25% !important;
         float: left !important;
       }
+  #wsd_checkout_page_right_column {
+    width: 100% !important
+  }
     }
 
 @media (min-width: 859px) {
