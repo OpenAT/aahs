@@ -410,15 +410,20 @@ body[data-rootcatid="38"] {
   body[data-rootcatid="38"] .oe_list.oe_product section {
     height: auto; }
   body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li {
-    font-size: 14.3999996185303px;
-    line-height: 1em;
+    line-height: 16px;
     font-weight: 300; }
     body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li a {
       color: #bf2221;
       font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
-      font-size: 14.3999996185303px;
+      font-size: 12px;
       padding: 0;
       padding-bottom: 6px; }
+    body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li a:hover {
+      text-decoration: underline;
+      background: transparent; }
+    body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li :active, body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li :focus, body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li :visited {
+      font-weight: bold !important;
+      color: #bf2221 !important; }
     body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li ul.nav-hierarchy {
       padding-left: 0; }
   body[data-rootcatid="38"] ul {
@@ -474,6 +479,9 @@ body[data-rootcatid="38"] {
   body[data-rootcatid="38"] .oe_list .text-info.oe_subdescription {
     display: block;
     color: #545454; }
+  body[data-rootcatid="38"] .oe_list section > h5 > strong > a {
+    font-size: 12px;
+    font-weight: bold !important; }
   body[data-rootcatid="38"] #website_sale_donate .oe_price_h4 > b {
     margin-right: auto;
     float: none; }

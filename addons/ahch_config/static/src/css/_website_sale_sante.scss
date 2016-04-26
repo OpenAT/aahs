@@ -141,15 +141,23 @@ body[data-rootcatid="38"] {
   }
   // SHOP CATEGORIES NAVIGATION
   ul.cat_menu li > ul > li > ul > li {
-    font-size: 14.3999996185303px;
-    line-height: 1em;
+    //font-size: 14.3999996185303px;
+    line-height: 16px;
     font-weight: 300;
     a {
       color: $santered;
       font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
-      font-size: 14.3999996185303px;
+      font-size: 12px;
       padding: 0;
       padding-bottom: 6px;
+    }
+    a:hover {
+      text-decoration: underline;
+      background: transparent;
+    }
+    :active, :focus, :visited {
+      font-weight: bold !important;
+      color: $santered !important;
     }
     ul.nav-hierarchy {
       padding-left: 0;
@@ -260,9 +268,15 @@ ul.cat_menu > li {
   .oe_product .text-info.oe_subdescription {
     display: none;
   }
-  .oe_list .text-info.oe_subdescription {
-    display: block;
-    color: #545454;
+  .oe_list {
+    .text-info.oe_subdescription {
+      display: block;
+      color: #545454;
+    }
+    section > h5 > strong > a {
+      font-size: 12px;
+      font-weight: bold !important;
+    }
   }
   #website_sale_donate .oe_price_h4 > b {
     margin-right: auto;
