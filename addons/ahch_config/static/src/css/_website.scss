@@ -27,11 +27,14 @@ body[data-rootcatid="44"] {
     #modal_optional_products table td:nth-child(2) {
       border-top-width: thin;
     }
-    .wsd_checkout_page_content {
-      td {
-        min-height: 75px;
-        height: auto;
+    .wsd_payment_page_content {
+      #cart_products {
+        td {
+            min-height: 75px;
+            height: auto;
+          }
       }
+
       .text-right {
         text-align: right !important;
       }

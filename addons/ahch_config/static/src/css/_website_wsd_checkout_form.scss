@@ -74,6 +74,11 @@ body {
     border-bottom: 0;
   }
 
+  .nav-tabs > li.active > a,
+  .nav-tabs > li > a {
+    border: 0 !important;
+  }
+
   .nav-tabs {
     text-align: left;
         border-bottom: 0;
