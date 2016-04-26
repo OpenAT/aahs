@@ -146,6 +146,7 @@ body[data-rootcatid="38"] {
     font-weight: 300;
     a {
       color: $santered;
+      font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
       font-size: 14.3999996185303px;
       padding: 0;
       padding-bottom: 6px;
@@ -261,6 +262,7 @@ ul.cat_menu > li {
   }
   .oe_list .text-info.oe_subdescription {
     display: block;
+    color: #545454;
   }
   #website_sale_donate .oe_price_h4 > b {
     margin-right: auto;

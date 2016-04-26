@@ -415,6 +415,7 @@ body[data-rootcatid="38"] {
     font-weight: 300; }
     body[data-rootcatid="38"] ul.cat_menu li > ul > li > ul > li a {
       color: #bf2221;
+      font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
       font-size: 14.3999996185303px;
       padding: 0;
       padding-bottom: 6px; }
@@ -471,7 +472,8 @@ body[data-rootcatid="38"] {
   body[data-rootcatid="38"] .oe_product .text-info.oe_subdescription {
     display: none; }
   body[data-rootcatid="38"] .oe_list .text-info.oe_subdescription {
-    display: block; }
+    display: block;
+    color: #545454; }
   body[data-rootcatid="38"] #website_sale_donate .oe_price_h4 > b {
     margin-right: auto;
     float: none; }
@@ -541,6 +543,8 @@ body[data-rootcatid="38"] {
   body[data-rootcatid="38"] .container {
     width: 100%;
     max-width: 860px; }
+    body[data-rootcatid="38"] .container #products_grid > div:nth-child(2n+1) {
+      background-color: #f9f9f9; }
     @media (min-width: 859px) {
       body[data-rootcatid="38"] .container .col-md-3 {
         width: 25% !important;

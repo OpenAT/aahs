@@ -10,6 +10,9 @@ body[data-rootcatid="38"] {
     width: 100%;
     max-width: 860px;
 
+    #products_grid > div:nth-child(2n+1) {
+      background-color: #f9f9f9;
+    }
     @media (min-width: 859px) {
       .col-md-3, {
         width: 25% !important;
