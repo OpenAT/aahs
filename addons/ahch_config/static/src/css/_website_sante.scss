@@ -1,27 +1,23 @@
-
-
-
 body[data-rootcatid="38"] {
   //font-family: 'Droid Sans',arial,sans-serif;
-  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  //font-family: sans-serif, Arial, Helvetica, sans-serif;
   line-height: 1.618em;
   color: #333;
   margin: 0;
   padding: 0;
 
-    .container {
+  .container {
     width: 100%;
     max-width: 860px;
-  }
 
-@media (min-width: 859px) {
+    @media (min-width: 859px) {
       .col-md-3, {
         width: 25% !important;
-        float: left !important;
+        float: left;
       }
     }
 
-@media (min-width: 859px) {
+    @media (min-width: 859px) {
       .col-md-9 {
         width: 75% !important;
         float: left !important;
@@ -83,10 +79,11 @@ body[data-rootcatid="38"] {
   a {
     font-family: sans-serif, Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: $red;
+    color: $santered;
   }
 
   // COLOURS
   .text-primary {
-    color: $red;
+    color: $santered;
   }
+}
