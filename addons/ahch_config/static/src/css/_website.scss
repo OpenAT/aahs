@@ -17,8 +17,30 @@ body[data-rootcatid="44"] {
 
   @media (min-width: 959px) {
     .col-md-3 {
-      width: 25% !important;
-      float: left !important;
+      width: 25%;
+      float: left;
+    }
+
+    .wsd_checkout_page_content {
+      #wsd_checkout_page_right_column {
+        width: 25%;
+        float: right;
+      }
+      #wsd_checkout_page_left_column {
+        width: 75%;
+        float: left;
+      }
+    }
+    @media ( min-width: 992px ) {
+      #wsd_checkout_page_right_column.col-md-push-8 {
+        left: auto;
+      }
+      #wsd_checkout_page_right_column.col-md-offset-1 {
+        margin-left: 0;
+      }
+      #wsd_checkout_page_left_column.col-md-pull-4 {
+        right: auto;
+      }
     }
   }
 
