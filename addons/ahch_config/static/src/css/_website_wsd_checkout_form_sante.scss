@@ -32,4 +32,9 @@ body[data-last-visited-rootcatid="38"] {
     border-radius: 0;
   }
 
+  #wsd_checkout_form {
+      .form-control-feedback {
+        top: 27px !important;
+      }
+  }
 }
