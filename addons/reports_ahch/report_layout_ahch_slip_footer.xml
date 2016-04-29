@@ -27,8 +27,8 @@
                         <span t-field="company.city"/>
                     </div>
                     <div style="width:55mm; font-size:9px; text-align:left; font-family: 'OCR-B'; position: absolute; top: 25mm; left: 0mm">
-                        IBAN: <span t-field="company.bank_ids.acc_number"/><br/>
-                        BIC : <span t-field="company.bank_ids.bank_bic"/>
+                    <!--    IBAN: <span t-field="company.bank_ids.acc_number"/><br/>
+                        BIC : <span t-field="company.bank_ids.bank_bic"/>-->
                     </div>
                     <div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 20mm">
                         <span t-field="company.bank_ids.esr_customer_number"/>
@@ -40,8 +40,8 @@
                         <span t-field="company.city"/>
                     </div>
                     <div style="width:55mm; font-size:9px; text-align:left; font-family: 'OCR-B'; position: absolute; top: 25mm; left: 60mm">
-                        IBAN: <span t-field="company.bank_ids.acc_number"/><br/>
-                        BIC : <span t-field="company.bank_ids.bank_bic"/>
+                        <!-- IBAN: <span t-field="company.bank_ids.acc_number"/><br/>
+                        BIC : <span t-field="company.bank_ids.bank_bic"/> -->
                     </div>
                     <div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 82mm">
                         <span t-field="company.bank_ids.esr_customer_number"/>
