@@ -4,12 +4,12 @@
     <data noupdate="1">
 
         <!-- Webshop Email template -->
-        <record id="email_template_webshop" model="email.template">
-            <field name="name">Webshop Sales Order Transaction-State-Info</field>
+        <record id="email_template_sante_salesorder_webshop" model="email.template">
+            <field name="name">Sales Order sante Template</field>
             <field name="email_from">${(object.user_id.email or '')|safe}</field>
-            <field name="subject">${object.company_id.name|safe} - Transaction Summary for ${object.name or 'n/a'}</field>
+            <field name="subject">${object.company_id.name|safe} - ${object.name or 'n/a'}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>
-            <field name="reply_to">webshop@aids.ch</field>
+            <field name="reply_to">webshop@sante-sexuelle.ch</field>
             <field name="model_id" ref="sale.model_sale_order"/>
             <field name="auto_delete" eval="True"/>
             <!--<field name="report_template" ref="sale.report_sale_order"/>-->
@@ -50,50 +50,22 @@
         Datum: ${object.date_order}<br/>
         Fortschritt: <strong style="text-transform:uppercase;">${object.payment_tx_id.state or '?'}</strong>
     </p>
-    % for line in object.sale_order_id.order_line:
-        % if line.cat_root_id:
-            ${(line.cat_root_id or '44') | safe}
-        <p>Sollten sie Fragen haben kontaktieren sie bitte:
-            E-Mail: <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">webshop@aids.ch</a>
-        </p>
-        % endif
-    % endfor
-    % for line in object.sale_order_id.order_line:
-        % if line.cat_root_id:
-            ${(line.cat_root_id or '38') | safe}
         <p>Sollten sie Fragen haben kontaktieren sie bitte:
             E-Mail: <a href="mailto:webshop@sante-sexuelle.ch" style="display:block; padding-left: 14px;">webshop@sante-sexuelle.ch</a>
         </p>
-        % endif
-    % endfor
     <p>&nbsp;</p>
     <h3>
         <strong>${object.company_id.name}</strong>
     </h3>
     <p>
-        % if object.company_id.street:
-            ${object.company_id.street}<br/>
-        % endif
-        % if object.company_id.street2:
-            ${object.company_id.street2}<br/>
-        % endif
-        % if object.company_id.city or object.company_id.zip:
-            ${object.company_id.zip} ${object.company_id.city}<br/>
-        % endif
-        % if object.company_id.country_id:
-            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
-        % endif
-        % if object.company_id.phone:
-            Tel.:&nbsp;${object.company_id.phone}<br/>
-        % endif
         % if object.company_id.email:
-            E-Mail.:&nbsp;<a href="mailto:${object.company_id.email}">${object.company_id.email}</a><br/>
+            E-Mail.:&nbsp;<a href="mailto:${object.company_id.email}">${object.company_id.email_report_dd}</a><br/>
         % endif
         % if object.company_id.website:
-            Web.:&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a><br/>
+            Web.:&nbsp;<a href="${object.company_id.website}">${object.company_id.website_report_dd}</a><br/>
         % endif
-        % if object.company_id.logo:
-            <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo}" style="width: 120px;"></div>
+        % if object.company_id.logo_report_dd:
+            <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo_report_dd}" style="width: 120px;"></div>
         % endif
     </p>
 
