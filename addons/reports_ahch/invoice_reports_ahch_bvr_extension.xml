@@ -12,8 +12,7 @@
                             <field name="bvr_address_left_top_horz"/>
                             <field name="bvr_address_left_top_vert"/>
                             <field name="bvr_address2_left_top_vert"/>
-                            <field name="bvr_accountnr_left_delta_horz"/>
-                            <field name="bvr_accountnr2_left_delta_vert"/>
+                            <field name="bvr_customernr_delta_horz"/>
                             <field name="bvr_ammount_delta_horz"/>
                             <field name="bvr_ammount_left_delta_vert"/>
                             <field name="bvr_ammountdec_left_delta_vert"/>
@@ -22,18 +21,14 @@
                             <field name="bvr_address_left_bottom_horz"/>
                             <field name="bvr_address_left_bottom_vert"/>
                             <field name="bvr_address2_left_bottom_vert"/>
-                            <field name="bvr_esr_left_delta_horz"/>
-                            <field name="bvr_esr_left_delta_vert"/>
-                        </group>
-                        <group col="4" colspan="4">
+                            <field name="referencenr_left_delta_horz"/>
+                            <field name="referencenr_left_delta_vert"/>
+                            <field name="referencenr_right_delta_horz"/>
+                            <field name="referencenr_right_delta_vert"/>
                             <field name="bvr_scan_line_font_size"/>
                             <field name="bvr_scan_line_letter_spacing"/>
                             <field name="bvr_address_right_bottom_horz"/>
                             <field name="bvr_address_right_bottom_vert"/>
-                            <field name="bvr_esr_right_delta_horz"/>
-                            <field name="bvr_esr_right_delta_vert"/>
-                        </group>
-                        <group colspan="6">
                             <field name="bvr_kodierline_delta_vert"/>
                             <field name="bvr_kodierline_delta_horz"/>
                         </group>

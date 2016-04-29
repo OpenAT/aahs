@@ -45,7 +45,5 @@ Use this Addon as a Base for all Customer specific Modifications containing:
     'data': [
         'views/templates.xml',
         'views/transactionstate_template.xml',
-        'views/salesorder_template_sante.xml',
-        'views/salesorder_template_aahs.xml',
     ],
 }

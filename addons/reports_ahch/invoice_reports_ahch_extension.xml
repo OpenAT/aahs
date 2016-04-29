@@ -12,6 +12,9 @@
                 <field name="logo_report_dd" widget="image"/>
                 <field name="website_report_dd"/>
                 <field name="email_report_dd"/>
+                <field name="streetname_report_dd"/>
+                <field name="city_report_dd"/>
+                <field name="zip_report_dd"/>
             </field>
         </field>
 </record>
