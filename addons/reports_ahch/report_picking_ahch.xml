@@ -152,7 +152,7 @@
                               </tbody>
                             </table>
                         </div>
-                    <t t-call="reports_ahch.report_layout_ahch_slip_footer"/>
+                    <t t-call="reports_ahch.report_layout_ahch_basic_footer"/>
                 </t>
         </template>
         <!-- Qweb Report Action -->
