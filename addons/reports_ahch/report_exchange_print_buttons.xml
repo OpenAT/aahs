@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="ahch_report_sale_order" inherit_id="sale.saleorder_document">
+            <button name="print_quotation" position="replace">
+                <button name="%(ahch_print_button)d" string="Print" type="action" states="draft" class="oe_highlight"/>
+            </button>
+        </template>
+    </data>
+</openerp>

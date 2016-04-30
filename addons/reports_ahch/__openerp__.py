@@ -33,6 +33,7 @@
         'report_saleorder_ahch.xml',
         'report_layout_ahch_saint_header.xml',
         'report_layout_ahch_slip_footer.xml',
+        'report_layout_ahch_slip_footer_invoice.xml',
         'report_layout_ahch_basic_footer.xml',
         'invoice_reports_ahch_extension.xml',
         'paperformat_ahch.xml',

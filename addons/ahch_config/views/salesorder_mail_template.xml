@@ -1,12 +1,12 @@
 <openerp>
     <!-- Mail template is done in a NOUPDATE block
          so users can freely customize/delete them -->
-    <data noupdate="1">
+    <data noupdate="0">
 
         <!-- Webshop Email template -->
-        <record id="email_template_aahs_salesorder_webshop" model="email.template">
-            <field name="name">Sales Order aahs Template</field>
-            <field name="email_from">${(object.user_id.email or '')|safe}</field>
+        <record id="salesorder_email_template" model="email.template">
+            <field name="name">Sales Order Template aahs (Portal)</field>
+            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"Sainte Sexuelle" <webshop@aids.ch>' or '"Aidshilfe" <webshop@aids.ch>')|safe}]]></field>
             <field name="subject">${object.company_id.name|safe} - ${object.name or 'n/a'}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>
             <field name="reply_to">webshop@aids.ch</field>
@@ -50,10 +50,10 @@
         Datum: ${object.date_order}<br/>
         Fortschritt: <strong style="text-transform:uppercase;">${object.payment_tx_id.state or '?'}</strong>
     </p>
-        <p>Sollten sie Fragen haben kontaktieren sie bitte:
-            E-Mail: <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">webshop@aids.ch</a>
-        </p>
-    <p>&nbsp;</p>
+
+        <p>Bei Fragen kontaktieren sie bitte:</p>
+        % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
+            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a>
     <h3>
         <strong>${object.company_id.name}</strong>
     </h3>
@@ -83,6 +83,25 @@
             <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo}" style="width: 120px;"></div>
         % endif
     </p>
+        % endif
+        % if object.cat_root_id.id == 80:
+            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email_report_dd or '') | safe}</a>
+    <h3>
+        <strong>${object.cat_root_id}</strong>
+    </h3>
+    <p>
+        % if object.company_id.email_report_dd:
+            E-Mail.:&nbsp;<a href="mailto:${object.company_id.email}">${object.company_id.email_report_dd}</a><br/>
+        % endif
+        % if object.company_id.website:
+            Web.:&nbsp;<a href="${object.company_id.website}">${object.company_id.website_report_dd}</a><br/>
+        % endif
+        % if object.company_id.logo_report_dd:
+            <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo_report_dd}" style="width: 120px;"></div>
+        % endif
+    </p>
+        % endif
+    <p>&nbsp;</p>
 
 </div>
 ]]>
