@@ -51,8 +51,8 @@
 
         <p>Bei Fragen kontaktieren sie bitte:</p>
         % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
-            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a>
-    <div style="display:table; border:1px solid black;">
+            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a><br/>
+    <div style="display:table;">
         <div style="display:table-header-group;">
             <div style="display:table-row;">
                 <div style="display:table-cell; border:1px solid black;">Name</div>
