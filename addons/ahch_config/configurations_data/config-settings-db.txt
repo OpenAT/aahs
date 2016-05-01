@@ -111,3 +111,15 @@ Settings - configuration:
                 Payment Method Type e.g. VISA (BRAND): PostFinance Card
             ESR:
                 Anbieter: Postfinance
+
+    Direkt auf der Website Anpassungen im SHOP
+        in einer Kategorie
+            Anpassen:
+                Product desciption: True
+                add to cart: True
+                square Images: True
+                Product cart: True
+                Categorie Advanced Description: False
+        auf der Produktpage:
+            Anpassen:
+                Show Cart in checkoutbox
