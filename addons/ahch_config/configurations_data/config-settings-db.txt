@@ -50,5 +50,64 @@ Settings - configuration:
                 Beschreibung: Text für die Website und Translation
                 Varianten:  Anlage der Varianten des Produktes
                 Finanzen: Inventurbewertung: Echtzeit Automatisch
+            Produktkategorien:
+                Aidshilfe Schweiz:
+                    Reihenfolge: 1
+                    Hide this Category from Cat-Navigation: True
+                    Redirect URL after PP Form-Feedback: https://www.aids.ch/shop
+                    RootCateg. (Start Cat-Navigation from here): True
+                    Products per Page: 9
+                    Products per Row: 3
+                    Shop Grid Template:
+                        Shop & Infomaterial
+                            Infomaterial
+                                Jugendliche (überall wo benötigt)
+                                    Shop Grid Layout: List view
+                Sante Sexuelle:
+                    Reihenfolge: 10000
+                    Hide this Category from Cat-Navigation: True
+                    Redirect URL after PP Form-Feedback: https://www.aids.ch/shop
+                    RootCateg. (Start Cat-Navigation from here): True
+                    Products per Page: 9
+                    Products per Row: 3
+                    Shop Grid Template:
+                        Shop & Infomaterial
+                            Infomaterial
+                                Jugendliche (überall wo benötigt)
+                                    Shop Grid Layout: List view
+
+        LAGER:
+            Lagerorte: Umbenennen -->
+            Meldebetandsregeln --> einmalig zeigen rest muss Aidshilfe selbst machen
 
 
+        "Zahlung" "Zahlungsanbiete"
+            MASTER:
+                Wiederkehrende Spenden: False
+                Submit Button Text: Bezahlen
+                Redirect URL after PP Form-Feedback:
+                Do not send Confirmation E-Mails on TX-State changes: False
+                Anbieter: Ogonedadi
+                Sichtbar im Portal / auf Webseite: True
+                Umgebung: Testbetrieb
+                Vorgehensweise: Automatisch
+                Nachricht: You will be redirected to the Ogone website after clicking on the payment button.
+                Dank-Mitteilung: Danke für Ihren Einkauf
+                PSPID: aidshilfeCHtest
+                API User ID: aahsAPI
+                API User Password:
+                SHA Key IN:
+                SHA Key OUT:
+                Payment Method e.g. Credit Card (PM): CreditCard
+                Payment Method Type e.g. VISA (BRAND): MasterCard
+            VISA:
+                Payment Method e.g. Credit Card (PM): CreditCard
+                Payment Method Type e.g. VISA (BRAND): VISA
+            eFinance:
+                Payment Method e.g. Credit Card (PM): PostFinance E-Finance
+                Payment Method Type e.g. VISA (BRAND): PostFinance E-Finance
+            Card:
+                Payment Method e.g. Credit Card (PM): PostFinance Card
+                Payment Method Type e.g. VISA (BRAND): PostFinance Card
+            ESR:
+                Anbieter: Postfinance
