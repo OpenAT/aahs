@@ -1,0 +1,54 @@
+Settings - configuration:
+    "Einstellungen" "Unternehmen"
+        eintragen PF Nummer beim Konto: 01-60446-1
+        Report Konfiguration Eintragen zweites Logo, email und website bei Unternehmen bei "report Konfiguration": https://sante-sexuelle.com, email: shop@aids.ch
+
+    "Einstellungen" "Language Settings"
+        Datum bei Sprache %d.%m.%Y
+
+    "Einstellungen" "Konfiguration" "System Parameter"
+        url.report ….. value …. http://127.0.0.1:20080
+        mail.catchall.alias —> webshop
+        mail.catchall.domain —> aids.ch
+        web.base.url —> https://webshop.aids.ch
+
+    "Einstellungen" "Verkauf"
+            Verkauf Verkaufsteam direktverkauf —> email webshop@aids.ch
+
+    User anlegen (KEIN ALIAS)
+
+    "einstellungen"
+        website:
+            land schweiz
+            default payment ESR
+            default payment einmalig
+            auf seite bleiben beim produkte hinzufügen
+            Global redirect URL: ????
+            configuration URLS separated by: aahs.datadialog.net
+
+        EMAIL:
+            postausgang:  postausgang Serve: relay.youngsolutions.ch,  Port: 587, Sicherheit: TLS (START TLS), user: webshop@aids.ch, passwd:
+            posteingang: server: exchange.smvw.ch, Port: 993 SSL/TLS, ServerTyp: imap, user: webshop@aids.ch, passwd:
+            website billing fields —> siehe xls file im ahch_config/configurations_data
+            website shipping fields —> siehe xls file im ahch_config/configurations_data
+
+        Grundeinstellungen:
+            alias domain: aids.ch
+
+        Finanzen:
+            Währung:
+                Tageskurs 1 wenn nicht mehrer Währungen Installiert sind
+                Rundungsfaktor 0.05 oder 0.02 da in der schweiz nur 0,5 am ende sein dard
+
+        Verkauf:
+            Produkte:
+                Vorlage für die Seite des Artikels in der Webpage: Simple Layout
+                verkauf:
+                    Öffentliche Kategorie: entsprechend eintragen
+                    Im Online-Shop verfügbar: veröffentlicht
+                Information: Lagerprodukt oder bei DOWNLOAD ONLY Produkten Dienstleistung
+                Beschreibung: Text für die Website und Translation
+                Varianten:  Anlage der Varianten des Produktes
+                Finanzen: Inventurbewertung: Echtzeit Automatisch
+
+
