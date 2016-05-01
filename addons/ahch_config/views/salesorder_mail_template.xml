@@ -54,6 +54,29 @@
         <p>Bei Fragen kontaktieren sie bitte:</p>
         % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
             <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a>
+    <div style="display:table; border:1px solid black;">
+        <div style="display:table-header-group;">
+            <div style="display:table-row;">
+                <div style="display:table-cell; border:1px solid black;">Name</div>
+                <div style="display:table-cell; border:1px solid black;">Anzahl</div>
+                <div style="display:table-cell; border:1px solid black;">Download</div>
+            </div>
+        </div>
+        <div style="display:table-row-group;">
+            % for line in object.order_line:
+                <div style="display:table-row;">
+                    <div style="display:table-cell;">${line.product_id.name}</div>
+                    <div style="display:table-cell;">${line.product_uom_qty}</div>
+                    % if line.product_id.webshop_download_file:
+                        <div style="display:table-cell;"><a href="/web/binary/saveas?model=product.product&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_id.id}">Download</a></div>
+                    % endif
+                    % if line.product_tmpl_id.webshop_download_file:
+                        <div style="display:table-cell;"><a href="/web/binary/saveas?model=product.template&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_tmpl_id.id}">Download</a></div>
+                    % endif
+                </div>
+            % endfor
+        </div>
+    </div>
     <h3>
         <strong>${object.company_id.name}</strong>
     </h3>
