@@ -13,5 +13,16 @@
             </xpath>
         </template>
 
+        <!-- Add small cart to shop/confirmation_static -->
+        <template id="confirmation_static_aahs" inherit_id="website_sale_donate.confirmation_static" name="Confirmation Static AAHS">
+            <xpath expr="//h1[@class='payment_status']" position="after">
+                <t t-call="website_sale_donate.small_cart">
+                    <t t-set="show_download_links" t-value="True"/>
+                    <t t-set="disable_changing_products" t-value="True"/>
+                    <t t-set="website_sale_order" t-value="order"/>
+                </t>
+            </xpath>
+        </template>
+
     </data>
 </openerp>

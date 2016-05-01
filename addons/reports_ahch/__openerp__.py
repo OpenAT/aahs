@@ -16,8 +16,6 @@
 #
 ##############################################################################
 
-#         'paperformat_ahch.xml'
-
 {
     'name': 'reports_ahch',
     'summary': """Invoice Reports AHCH""",
@@ -25,8 +23,14 @@
     'version': '1.0',
     'website': 'https://www.datadialog.net',
     'installable': True,
-    'depends': ['sale'],
+    'depends': [
+        'account',
+        'sale',
+        'stock',
+        'report_custom_filename',
+    ],
     'data': [
+        'paperformat_ahch.xml',
         'report_invoice_ahch.xml',
         'report_picking_ahch.xml',
         'report_purchaseorder_ahch.xml',
@@ -36,7 +40,6 @@
         'report_layout_ahch_slip_footer_invoice.xml',
         'report_layout_ahch_basic_footer.xml',
         'invoice_reports_ahch_extension.xml',
-        'paperformat_ahch.xml',
         'invoice_reports_ahch_bvr_extension.xml',
     ],
 }

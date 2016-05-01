@@ -1,9 +1,9 @@
 <openerp>
-    <data noupdate="0">
+    <data noupdate="1">
 
         <!-- Webshop Email template -->
-        <record id="email_template_webshop" model="email.template">
-            <field name="name">Webshop Sales Order Transaction-State-Info</field>
+        <record id="website_sale_donate.email_template_webshop" model="email.template">
+            <field name="name">Webshop Sales Order Transaction-State-Info Overwrite</field>
             <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"Sainte Sexuelle" <webshop@aids.ch>' or '"Aidshilfe" <webshop@aids.ch>')|safe}]]></field>
             <field name="subject">${object.company_id.name|safe} - Transaction Summary for ${object.name or 'n/a'}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>

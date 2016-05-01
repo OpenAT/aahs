@@ -2,27 +2,7 @@
 <openerp>
     <data>
 
-                <!-- Qweb Report Action -->
-        <report
-            id="report_invoice_ahch"
-            model="account.invoice"
-            string="Invoice Report AHCH"
-            report_type="qweb-pdf"
-            name="reports_ahch.invoice_ahch_template"
-            file="reports_ahch.invoice_ahch_template"
-            attachment_use="False"
-            attachment="(object.state in ('draft','open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
-        />
-                <!-- Main Document Template -->
-        <template id="invoice_ahch_template">
-            <t t-call="report.html_container">
-                <t t-foreach="doc_ids" t-as="doc_id">
-                    <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'reports_ahch.invoice_ahch_document')"/>
-                </t>
-            </t>
-        </template>
-
-                <!-- Main Document Report -->
+        <!-- account.invoice qweb report with ESR slip -->
         <template id="invoice_ahch_document">
                 <t t-if ="o and 'company_id' in o">
                 <t t-set="customer" t-value="o.partner_id"/>
@@ -209,5 +189,23 @@
                     </t>
                 </t>
         </template>
+
+        <!-- INHERIT and replace the original account.invoice qweb-report -->
+        <template id="overwrite_invoice" inherit_id="account.report_invoice" name="Overwrite Invoice">
+            <xpath expr="//t[@t-call='report.html_container']" position="replace">
+                <t t-call="report.html_container">
+                    <t t-foreach="doc_ids" t-as="doc_id">
+                        <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'reports_ahch.invoice_ahch_document')"/>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+
+        <!-- Paper Format for account.invoice qweb-report -->
+        <record id="account.account_invoices" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="reports_ahch.paperformat_ahch" />
+            <field name="download_filename">Rechnung_${o.number}.pdf</field>
+        </record>
+
     </data>
 </openerp>

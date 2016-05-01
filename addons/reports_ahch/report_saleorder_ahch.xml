@@ -2,16 +2,7 @@
 <openerp>
     <data>
 
-                <!-- Main Document Template -->
-        <template id="saleorder_ahch_template">
-            <t t-call="report.html_container">
-                <t t-foreach="doc_ids" t-as="doc_id">
-                    <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'reports_ahch.saleorder_ahch_document')"/>
-                </t>
-            </t>
-        </template>
-
-                <!-- Main Document Report -->
+        <!-- Sale.Order Qweb-PDF Report with ESR Slip -->
         <template id="saleorder_ahch_document">
                 <t t-if ="o and 'company_id' in o">
                     <t t-call="reports_ahch.report_layout_ahch_saint_header"/>
@@ -130,16 +121,23 @@
                     <t t-call="reports_ahch.report_layout_ahch_slip_footer"/>
                </t>
         </template>
-        <!-- Qweb Report Action -->
-        <report
-            id="report_saleorder_ahch"
-            model="sale.order"
-            string="Saleorder Report AHCH"
-            report_type="qweb-pdf"
-            name="reports_ahch.saleorder_ahch_template"
-            file="reports_ahch.saleorder_ahch_template"
-            attachment_use="False"
-            attachment="(object.state in ('draft','manuel','done')) and ('INV'+(object.name or '').replace('/','')+'.pdf')"
-        />
+
+        <!-- INHERIT and replace the original sale.order qweb-report -->
+        <template id="overwrite_so" inherit_id="sale.report_saleorder" name="Overwrite SO">
+            <xpath expr="//t[@t-call='report.html_container']" position="replace">
+                <t t-call="report.html_container">
+                    <t t-foreach="doc_ids" t-as="doc_id">
+                        <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'reports_ahch.saleorder_ahch_document')"/>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+
+        <!-- Set the correct paper format for the original sale.order qweb-report action -->
+        <record id="sale.report_sale_order" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="reports_ahch.paperformat_ahch" />
+            <field name="download_filename">Auftrag_${o.name}.pdf</field>
+        </record>
+
     </data>
 </openerp>
