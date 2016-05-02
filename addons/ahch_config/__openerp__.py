@@ -36,6 +36,8 @@ Use this Addon as a Base for all Customer specific Modifications containing:
     'website': 'https://www.datadialog.net',
     'installable': True,
     'depends': [
+        'sale',
+        'portal_sale',
         'website',
         'website_sale_donate',
     ],

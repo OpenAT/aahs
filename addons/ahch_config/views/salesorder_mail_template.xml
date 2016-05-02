@@ -1,11 +1,11 @@
 <openerp>
     <!-- Mail template is done in a NOUPDATE block
          so users can freely customize/delete them -->
-    <data noupdate="0">
+    <data noupdate="1">
 
-        <!-- Webshop Email template -->
-        <record id="salesorder_email_template" model="email.template">
-            <field name="name">Sales Order Template aahs (Portal)</field>
+        <!-- OVERWRITE: sale.order portal email template  -->
+        <record id="portal_sale.email_template_edi_sale" model="email.template">
+            <field name="name">Sales Order - Send by Email (Portal) OVERWRITE</field>
             <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"Sainte Sexuelle" <webshop@aids.ch>' or '"Aidshilfe" <webshop@aids.ch>')|safe}]]></field>
             <field name="subject">${object.company_id.name|safe} - ${object.name or 'n/a'}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>
@@ -130,5 +130,135 @@
 ]]>
             </field>
         </record>
+
+
+       <!-- OVERWRITE: sale.order regular email template  -->
+        <record id="sale.email_template_edi_sale" model="email.template">
+            <field name="name">Sales Order - Send by Email OVERWRITE</field>
+            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"Sainte Sexuelle" <webshop@aids.ch>' or '"Aidshilfe" <webshop@aids.ch>')|safe}]]></field>
+            <field name="subject">${object.company_id.name|safe} - ${object.name or 'n/a'}</field>
+            <field name="partner_to">${object.partner_invoice_id.id}</field>
+            <field name="reply_to">webshop@aids.ch</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="auto_delete" eval="True"/>
+            <!--<field name="report_template" ref="sale.report_sale_order"/>-->
+            <!--<field name="report_name">${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}</field>-->
+            <field name="lang">${object.partner_id.lang}</field>
+            <!--<field name="user_signature" eval="True"/>-->
+            <field name="body_html">
+<![CDATA[
+<div style="font-family: Arial, Verdana, sans-serif; font-size: 14px;">
+
+    <h2>
+        Hallo ${object.partner_id.name},<br/>
+        vielen Dank für ihr Vertrauen!
+    </h2>
+    <h3><br/>Ihre Persönlichen daten</h3>
+    <p>
+        % if object.partner_id.name:
+            ${object.partner_id.name}<br/>
+        % endif
+        % if object.partner_id.street:
+            ${object.partner_id.street}<br/>
+        % endif
+        % if object.partner_id.street2:
+            ${object.partner_id.street2}<br/>
+        % endif
+        % if object.partner_id.city or object.partner_id.zip:
+            ${object.partner_id.zip} ${object.partner_id.city}<br/>
+        % endif
+        % if object.partner_id.email:
+            E-Mail.:&nbsp;<a href="mailto:${object.partner_id.email}">${object.partner_id.email}</a><br/>
+        % endif
+
+     </p>
+    <h3><br/>Vorgangsübersicht:</h3>
+    <p style="padding-left: 14px;">
+        Nummer: <strong>${object.name}</strong><br/>
+        Summe: ${object.amount_total}&nbsp;${object.pricelist_id.currency_id.name}<br/>
+        Datum: ${object.date_order}<br/>
+        Fortschritt: <strong style="text-transform:uppercase;">${object.payment_tx_id.state or '?'}</strong>
+    </p>
+
+        <p>Bei Fragen kontaktieren sie bitte:</p>
+        % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
+            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a><br/>
+    <div style="display:table;>
+        <div style="display:table-header-group;">
+            <div style="display:table-row;">
+                <div style="display:table-cell; border:1px solid black;">Name</div>
+                <div style="display:table-cell; border:1px solid black;">Anzahl</div>
+                <div style="display:table-cell; border:1px solid black;">Download</div>
+            </div>
+        </div>
+        <div style="display:table-row-group;">
+            % for line in object.order_line:
+                <div style="display:table-row;">
+                    <div style="display:table-cell;">${line.product_id.name}</div>
+                    <div style="display:table-cell;">${line.product_uom_qty}</div>
+                    % if line.product_id.webshop_download_file:
+                        <div style="display:table-cell;"><a href="/web/binary/saveas?model=product.product&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_id.id}">Download</a></div>
+                    % endif
+                    % if line.product_tmpl_id.webshop_download_file:
+                        <div style="display:table-cell;"><a href="/web/binary/saveas?model=product.template&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_tmpl_id.id}">Download</a></div>
+                    % endif
+                </div>
+            % endfor
+        </div>
+    </div>
+    <h3>
+        <strong>${object.company_id.name}</strong>
+    </h3>
+    <p>
+        % if object.company_id.street:
+            ${object.company_id.street}<br/>
+        % endif
+        % if object.company_id.street2:
+            ${object.company_id.street2}<br/>
+        % endif
+        % if object.company_id.city or object.company_id.zip:
+            ${object.company_id.zip} ${object.company_id.city}<br/>
+        % endif
+        % if object.company_id.country_id:
+            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
+        % endif
+        % if object.company_id.phone:
+            Tel.:&nbsp;${object.company_id.phone}<br/>
+        % endif
+        % if object.company_id.email:
+            E-Mail.:&nbsp;<a href="mailto:${object.company_id.email}">${object.company_id.email}</a><br/>
+        % endif
+        % if object.company_id.website:
+            Web.:&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a><br/>
+        % endif
+        % if object.company_id.logo:
+            <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo}" style="width: 120px;"></div>
+        % endif
+    </p>
+        % endif
+        % if object.cat_root_id.id == 80:
+            <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email_report_dd or '') | safe}</a>
+    <h3>
+        <strong>${object.cat_root_id}</strong>
+    </h3>
+    <p>
+        % if object.company_id.email_report_dd:
+            E-Mail.:&nbsp;<a href="mailto:${object.company_id.email}">${object.company_id.email_report_dd}</a><br/>
+        % endif
+        % if object.company_id.website:
+            Web.:&nbsp;<a href="${object.company_id.website}">${object.company_id.website_report_dd}</a><br/>
+        % endif
+        % if object.company_id.logo_report_dd:
+            <div style="padding:0; margin:0;"><img src="data:image/png;base64,${object.company_id.logo_report_dd}" style="width: 120px;"></div>
+        % endif
+    </p>
+        % endif
+    <p>&nbsp;</p>
+
+</div>
+]]>
+            </field>
+        </record>
+
 </data>
 </openerp>
