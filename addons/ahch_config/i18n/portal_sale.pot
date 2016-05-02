@@ -1,0 +1,323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* portal_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-02 16:33+0000\n"
+"PO-Revision-Date: 2016-05-02 16:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: portal_sale
+#: model:email.template,body_html:portal_sale.email_template_edi_sale
+msgid "\n"
+"\n"
+"<div style=\"font-family: Arial, Verdana, sans-serif; font-size: 14px;\">\n"
+"\n"
+"    <h2>\n"
+"        Hallo ${object.partner_id.name},<br/>\n"
+"        vielen Dank für ihr Vertrauen!\n"
+"    </h2>\n"
+"    <h3><br/>Ihre Persönlichen daten</h3>\n"
+"    <p>\n"
+"        % if object.partner_id.name:\n"
+"            ${object.partner_id.name}<br/>\n"
+"        % endif\n"
+"        % if object.partner_id.street:\n"
+"            ${object.partner_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.partner_id.street2:\n"
+"            ${object.partner_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.partner_id.city or object.partner_id.zip:\n"
+"            ${object.partner_id.zip} ${object.partner_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.partner_id.email:\n"
+"            E-Mail.:&nbsp;<a href=\"mailto:${object.partner_id.email}\">${object.partner_id.email}</a><br/>\n"
+"        % endif\n"
+"\n"
+"     </p>\n"
+"    <h3><br/>Vorgangsübersicht:</h3>\n"
+"    <p style=\"padding-left: 14px;\">\n"
+"        Nummer: <strong>${object.name}</strong><br/>\n"
+"        Summe: ${object.amount_total}&nbsp;${object.pricelist_id.currency_id.name}<br/>\n"
+"        Datum: ${object.date_order}<br/>\n"
+"        Fortschritt: <strong style=\"text-transform:uppercase;\">${object.payment_tx_id.state or '?'}</strong>\n"
+"    </p>\n"
+"\n"
+"        <p>Bei Fragen kontaktieren sie bitte:</p>\n"
+"        % if object.cat_root_id.id == False or object.cat_root_id.id == 55:\n"
+"            <a href=\"mailto:webshop@aids.ch\" style=\"display:block; padding-left: 14px;\">${(object.company_id.email or '') | safe}</a><br/>\n"
+"    <div style=\"display:table;>\n"
+"        <div style=\"display:table-header-group;\">\n"
+"            <div style=\"display:table-row;\">\n"
+"                <div style=\"display:table-cell; border:1px solid black;\">Name</div>\n"
+"                <div style=\"display:table-cell; border:1px solid black;\">Anzahl</div>\n"
+"                <div style=\"display:table-cell; border:1px solid black;\">Download</div>\n"
+"            </div>\n"
+"        </div>\n"
+"        <div style=\"display:table-row-group;\">\n"
+"            % for line in object.order_line:\n"
+"                <div style=\"display:table-row;\">\n"
+"                    <div style=\"display:table-cell;\">${line.product_id.name}</div>\n"
+"                    <div style=\"display:table-cell;\">${line.product_uom_qty}</div>\n"
+"                    % if line.product_id.webshop_download_file:\n"
+"                        <div style=\"display:table-cell;\"><a href=\"/web/binary/saveas?model=product.product&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_id.id}\">Download</a></div>\n"
+"                    % endif\n"
+"                    % if line.product_tmpl_id.webshop_download_file:\n"
+"                        <div style=\"display:table-cell;\"><a href=\"/web/binary/saveas?model=product.template&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_tmpl_id.id}\">Download</a></div>\n"
+"                    % endif\n"
+"                </div>\n"
+"            % endfor\n"
+"        </div>\n"
+"    </div>\n"
+"    <h3>\n"
+"        <strong>${object.company_id.name}</strong>\n"
+"    </h3>\n"
+"    <p>\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"            ${object.company_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.city or object.company_id.zip:\n"
+"            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.country_id:\n"
+"            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.phone:\n"
+"            Tel.:&nbsp;${object.company_id.phone}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.email:\n"
+"            E-Mail.:&nbsp;<a href=\"mailto:${object.company_id.email}\">${object.company_id.email}</a><br/>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            Web.:&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a><br/>\n"
+"        % endif\n"
+"        % if object.company_id.logo:\n"
+"            <div style=\"padding:0; margin:0;\"><img src=\"data:image/png;base64,${object.company_id.logo}\" style=\"width: 120px;\"></div>\n"
+"        % endif\n"
+"    </p>\n"
+"        % endif\n"
+"        % if object.cat_root_id.id == 80:\n"
+"            <a href=\"mailto:webshop@aids.ch\" style=\"display:block; padding-left: 14px;\">${(object.company_id.email_report_dd or '') | safe}</a>\n"
+"    <h3>\n"
+"        <strong>${object.cat_root_id}</strong>\n"
+"    </h3>\n"
+"    <p>\n"
+"        % if object.company_id.email_report_dd:\n"
+"            E-Mail.:&nbsp;<a href=\"mailto:${object.company_id.email}\">${object.company_id.email_report_dd}</a><br/>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            Web.:&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website_report_dd}</a><br/>\n"
+"        % endif\n"
+"        % if object.company_id.logo_report_dd:\n"
+"            <div style=\"padding:0; margin:0;\"><img src=\"data:image/png;base64,${object.company_id.logo_report_dd}\" style=\"width: 120px;\"></div>\n"
+"        % endif\n"
+"    </p>\n"
+"        % endif\n"
+"    <p>&nbsp;</p>\n"
+"\n"
+"</div>\n"
+"\n"
+"            "
+msgstr ""
+
+#. module: portal_sale
+#: model:email.template,body_html:portal_sale.email_template_edi_invoice
+msgid "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"\n"
+"    <p>Hello ${object.partner_id.name},</p>\n"
+"\n"
+"    <p>A new invoice is available for you: </p>\n"
+"    \n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Invoice number: <strong>${object.number}</strong><br />\n"
+"       &nbsp;&nbsp;Invoice total: <strong>${object.amount_total} ${object.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Invoice date: ${object.date_invoice}<br />\n"
+"       % if object.origin:\n"
+"       &nbsp;&nbsp;Order reference: ${object.origin}<br />\n"
+"       % endif\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Invoice%20${object.number}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>  \n"
+"\n"
+"    % set signup_url = object.get_signup_url()\n"
+"    % if signup_url:\n"
+"    <p>\n"
+"    You can access the invoice document and pay online via our Customer Portal:\n"
+"    </p>\n"
+"        <a style=\"display:block; width: 150px; height:20px; margin-left: 120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat no-repeat;\"\n"
+"           href=\"${signup_url}\">View Invoice</a>\n"
+"    % endif\n"
+"    \n"
+"    % if object.paypal_url:\n"
+"    <br/>\n"
+"    <p>It is also possible to directly pay with Paypal:</p>\n"
+"        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/btn_paynowcc_lg.gif\"/>\n"
+"        </a>\n"
+"    % endif\n"
+"    \n"
+"    <br/>\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"            ${object.company_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.city or object.company_id.zip:\n"
+"            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.country_id:\n"
+"            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"        % endif\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        % endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: portal_sale
+#: model:email.template,report_name:portal_sale.email_template_edi_sale
+msgid "${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+msgstr ""
+
+#. module: portal_sale
+#: model:email.template,subject:portal_sale.email_template_edi_sale
+msgid "${object.company_id.name|safe} - ${object.name or 'n/a'}"
+msgstr ""
+
+#. module: portal_sale
+#: model:email.template,subject:portal_sale.email_template_edi_invoice
+msgid "${object.company_id.name|safe} Invoice (Ref ${object.number or 'n/a' })"
+msgstr ""
+
+#. module: portal_sale
+#: view:account.config.settings:portal_sale.portal_sale_payment_option_config
+msgid "Configure payment acquiring methods"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.model,name:portal_sale.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: portal_sale
+#: model:email.template,report_name:portal_sale.email_template_edi_invoice
+msgid "Invoice_${(object.number or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,name:portal_sale.portal_action_invoices
+#: model:ir.ui.menu,name:portal_sale.portal_invoices
+msgid "Invoices"
+msgstr ""
+
+#. module: portal_sale
+#: model:res.groups,comment:portal_sale.group_payment_options
+msgid "Members of this group see the online payment options\n"
+"on Sale Orders and Customer Invoices. These options are meant for customers who are accessing\n"
+"their documents through the portal."
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.model,name:portal_sale.model_mail_mail
+msgid "Outgoing Mails"
+msgstr ""
+
+#. module: portal_sale
+#: field:account.invoice,portal_payment_options:0
+#: field:sale.order,portal_payment_options:0
+msgid "Portal Payment Options"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,name:portal_sale.action_quotations_portal
+#: model:ir.ui.menu,name:portal_sale.portal_quotations
+msgid "Quotations"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,name:portal_sale.action_orders_portal
+msgid "Sale Orders"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.model,name:portal_sale.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.ui.menu,name:portal_sale.portal_sales_orders
+msgid "Sales Orders"
+msgstr ""
+
+#. module: portal_sale
+#: help:account.config.settings,group_payment_options:0
+msgid "Show online payment options on Sale Orders and Customer Invoices to employees. If not checked, these options are only visible to portal users."
+msgstr ""
+
+#. module: portal_sale
+#: field:account.config.settings,group_payment_options:0
+msgid "Show payment buttons to employees too"
+msgstr ""
+
+#. module: portal_sale
+#: model:res.groups,name:portal_sale.group_payment_options
+msgid "View Online Payment Options"
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,help:portal_sale.portal_action_invoices
+msgid "We haven't sent you any invoice."
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,help:portal_sale.action_quotations_portal
+msgid "We haven't sent you any quotation."
+msgstr ""
+
+#. module: portal_sale
+#: model:ir.actions.act_window,help:portal_sale.action_orders_portal
+msgid "We haven't sent you any sales order."
+msgstr ""
+
+#. module: portal_sale
+#: view:account.invoice:portal_sale.view_account_invoice_filter_share
+msgid "[('share','=', False)]"
+msgstr ""
+

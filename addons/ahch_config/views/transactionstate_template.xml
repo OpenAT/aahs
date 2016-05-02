@@ -50,7 +50,6 @@
     </p>
 
         <p>Bei Fragen kontaktieren sie bitte:</p>
-        % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
             <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email or '') | safe}</a><br/>
     <div style="display:table;">
         <div style="display:table-header-group;">
@@ -75,6 +74,7 @@
             % endfor
         </div>
     </div>
+        % if object.cat_root_id.id == False or object.cat_root_id.id == 55:
     <h3>
         <strong>${object.company_id.name}</strong>
     </h3>
@@ -108,7 +108,7 @@
         % if object.cat_root_id.id == 80:
             <a href="mailto:webshop@aids.ch" style="display:block; padding-left: 14px;">${(object.company_id.email_report_dd or '') | safe}</a>
     <h3>
-        <strong>${object.cat_root_id}</strong>
+        <strong>${Sante-Sexuelle}</strong>
     </h3>
     <p>
         % if object.company_id.email_report_dd:
