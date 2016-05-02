@@ -136,6 +136,11 @@ msgid "Draft Invoice"
 msgstr "Rechnungsentwurf"
 
 #. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Invoice address:"
+msgstr "Rechnungsadresse:"
+
+#. module: reports_ahch
 #: view:website:reports_ahch.report_layout_ahch_basic_footer
 #: view:website:reports_ahch.report_layout_ahch_saint_header
 msgid "Email:"
