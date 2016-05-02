@@ -2,12 +2,14 @@ Settings - configuration:
     "Einstellungen" "Unternehmen"
         eintragen PF Nummer beim Konto: 01-60446-1
         Report Konfiguration Eintragen zweites Logo, email und website bei Unternehmen bei "report Konfiguration": https://sante-sexuelle.com, email: shop@aids.ch
+        port: 20080
+
 
     "Einstellungen" "Language Settings"
         Datum bei Sprache %d.%m.%Y
 
     "Einstellungen" "Konfiguration" "System Parameter"
-        url.report ….. value …. http://127.0.0.1:20080
+        report.url ….. value …. http://127.0.0.1:20080
         mail.catchall.alias —> webshop
         mail.catchall.domain —> aids.ch
         web.base.url —> https://webshop.aids.ch
@@ -16,6 +18,11 @@ Settings - configuration:
             Verkauf Verkaufsteam direktverkauf —> email webshop@aids.ch
 
     User anlegen (KEIN ALIAS)
+        Email Settings in/OUT als default ?
+        Do not add as follower: False
+        Passwörter gesetzt
+        Email an die User mit dem PAsswort vorbereitet
+        Email an die User mit den links und kurzbeschreibung und useraccounts vorbereitet
 
     "einstellungen"
         website:
@@ -34,11 +41,20 @@ Settings - configuration:
 
         Grundeinstellungen:
             alias domain: aids.ch
+    Zahlungsanbieter:
+        MASTER
+        VISA
+        ESR
+        CARD
+        eFinance
+        alles buttons und texte in der DB Übersetzt
 
         Finanzen:
             Währung:
                 Tageskurs 1 wenn nicht mehrer Währungen Installiert sind
                 Rundungsfaktor 0.05 oder 0.02 da in der schweiz nur 0,5 am ende sein dard
+                ???Umrechnungsfaktor 0 - ACHTUNG wird bei -i event. zurück gestellt 
+
 
         Verkauf:
             Produkte:
@@ -50,6 +66,10 @@ Settings - configuration:
                 Beschreibung: Text für die Website und Translation
                 Varianten:  Anlage der Varianten des Produktes
                 Finanzen: Inventurbewertung: Echtzeit Automatisch
+                Standardwerte: bei Neuanlage von Produkten
+                KEINE STEUER
+
+
             Produktkategorien:
                 Aidshilfe Schweiz:
                     Reihenfolge: 1
@@ -63,6 +83,7 @@ Settings - configuration:
                             Infomaterial
                                 Jugendliche (überall wo benötigt)
                                     Shop Grid Layout: List view
+
                 Sante Sexuelle:
                     Reihenfolge: 10000
                     Hide this Category from Cat-Navigation: True
@@ -79,6 +100,16 @@ Settings - configuration:
         LAGER:
             Lagerorte: Umbenennen -->
             Meldebetandsregeln --> einmalig zeigen rest muss Aidshilfe selbst machen
+            ????Standard Lieferart inkl regeln für 0 und 8
+            ??? Anlegen der notwendigen Konten
+            Einrichten der Konten bei der Standard Produktgruppe
+            Übersetzen aller Lagerrouten
+            Testen aller Lagervorgänge (lokal mit lerrer DB)
+
+
+
+
+
 
 
         "Zahlung" "Zahlungsanbiete"
@@ -114,12 +145,14 @@ Settings - configuration:
 
     Direkt auf der Website Anpassungen im SHOP
         in einer Kategorie
-            Anpassen:
+            Anpassen: Grid
                 Product desciption: True
                 add to cart: True
                 square Images: True
                 Product cart: True
+                Product Categories Advanced: True
                 Categorie Advanced Description: False
+
         auf der Produktpage:
             Anpassen:
                 Show Cart in checkoutbox

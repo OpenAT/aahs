@@ -11,6 +11,10 @@ body[data-last-visited-rootcatid="55"] {
     max-width: 960px;
   }
 
+  #products_grid > div:nth-child(2n+1) {
+      background-color: #f9f9f9;
+    }
+
   #wsd_checkout_page_right_column .text-muted > a {
         float: left;
   }
@@ -269,6 +273,8 @@ body[data-last-visited-rootcatid="55"] {
 
   .oe_list .text-info.oe_subdescription {
     display: block;
+    font: 14px/1.518em Arial,Helvetica,sans-serif;
+    color: black;
   }
   .oe_list.oe_product section {
     height: auto;

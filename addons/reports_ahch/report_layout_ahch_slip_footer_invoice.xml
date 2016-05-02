@@ -45,7 +45,7 @@
                         BIC : <span t-field="company.bank_ids.bank_bic"/> -->
                     </div>
                     <!-- <div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 82mm">-->
-                    <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(40 + company.bvr_customernr_delta_horz or 0) + 'mm; left: ' + str(60 + company.bvr_customernr_delta_vert or 0) + 'mm; position: absolute; text-align: right;'">
+                    <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(40 + company.bvr_customernr_delta_horz or 0) + 'mm; left: ' + str(80 + company.bvr_customernr_delta_vert or 0) + 'mm; position: absolute; text-align: right;'">
                         <span t-field="company.bank_ids.esr_customer_number"/>
                     </div>
                     <t t-if="'amount_total' in o.fields_get()">
