@@ -63,6 +63,9 @@ a {
 .oe_website_sale {
   padding-top: 2em; }
 
+#wsd_checkout_steps_nav > div > div > a.btn.btn-primary.navbar-btn {
+  display: none; }
+
 header .navbar {
   font-size: 14px; }
 
