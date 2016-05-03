@@ -19,6 +19,22 @@ body[data-last-visited-rootcatid="80"] {
       float: left;
   }
 
+    @media ( max-width: 400px ) { // workaround only needed if IFRAME ist used //
+    .oe_product.oe_list .oe_product_image img {
+      max-height: 160px !important;
+    }
+    .oe_product .oe_product_image {
+      position: initial;
+    }
+
+    #products_grid .oe_product section {
+      position: initial;
+      padding-top: 175px;
+      width: 100%;
+      background: transparent;
+    }
+  }
+
   @media ( max-width: 500px ) {
     .oe_cart table td:nth-child(2),
     #modal_optional_products table td:nth-child(2) {
