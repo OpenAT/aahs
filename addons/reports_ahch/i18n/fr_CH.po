@@ -16,11 +16,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: reports_ahch
-#: view:website:reports_ahch.report_layout_ahch_basic_footer
-msgid "&bull;"
-msgstr "&bull;"
-
-#. module: reports_ahch
 #: view:website:reports_ahch.invoice_ahch_document
 msgid "Amount"
 msgstr "Montant"
@@ -106,6 +101,7 @@ msgstr "Date prévue"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.picking_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Delivery Address:"
 msgstr "Adresse de livraison :"
 
@@ -123,6 +119,7 @@ msgstr "Destination"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Disc.(%)"
 msgstr "Rem.(%)"
 
@@ -176,11 +173,13 @@ msgstr "Invoice Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice address:"
 msgstr "Adresse de facturation :"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice and shipping address:"
 msgstr "Adresse de facturation et livraison"
 
@@ -201,6 +200,7 @@ msgstr "Date de la commande"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Order N°"
 msgstr "N° de commande"
 
@@ -242,11 +242,13 @@ msgstr "Postfinance Account Number"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Price"
 msgstr "Prix"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.picking_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Product"
 msgstr "Article"
 
@@ -299,6 +301,7 @@ msgstr "Saleorder Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Salesperson:"
 msgstr "Vendeur:"
 
@@ -310,6 +313,7 @@ msgstr "Date prévue"
 #. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Shipping address:"
 msgstr "Adresse de livraison :"
 
@@ -327,6 +331,11 @@ msgstr "Origine"
 #: view:website:reports_ahch.picking_ahch_document
 msgid "State"
 msgstr "État"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Invoice Date:"
+msgstr "Date de la facture"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.invoice_ahch_document

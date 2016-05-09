@@ -4,10 +4,10 @@
         <!-- Webshop Email template -->
         <record id="website_sale_donate.email_template_webshop" model="email.template">
             <field name="name">Webshop Sales Order Transaction-State-Info Overwrite 1</field>
-            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <webshop@aids.ch>' or '"Aids-Hilfe" <webshop@aids.ch>')|safe}]]></field>
+            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <shop@aids.ch>' or '"Aids-Hilfe" <shop@aids.ch>')|safe}]]></field>
             <field name="subject">${(object.cat_root_id.id == 80 and 'SEXUELLE GESUNDHEIT' or 'Aids-Hilfe' )|safe} Vorgangsübersicht ${object.name or ''}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>
-            <field name="reply_to"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <webshop@aids.ch>' or '"Aids-Hilfe" <webshop@aids.ch>')|safe}]]></field>
+            <field name="reply_to"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <shop@aids.ch>' or '"Aids-Hilfe" <shop@aids.ch>')|safe}]]></field>
             <field name="model_id" ref="sale.model_sale_order"/>
             <field name="auto_delete" eval="True"/>
             <!--<field name="report_template" ref="sale.report_sale_order"/>-->

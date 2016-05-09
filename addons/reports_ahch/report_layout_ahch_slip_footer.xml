@@ -48,14 +48,16 @@
                     <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(40 + company.bvr_customernr_delta_horz or 0) + 'mm; left: ' + str(80 + company.bvr_customernr_delta_vert or 0) + 'mm; position: absolute; text-align: right;'">
                         <span t-field="company.bank_ids.esr_customer_number"/>
                     </div>
-                    <t t-if="'amount_total' in o.fields_get()">
+                    <!--<t t-if="'amount_total' in o.fields_get()">
+                        <t t-set="split_amount_total" t-value="str(o.amount_total).split('.')"/>-->
                         <t t-set="intamount" t-value="'{0:,.0f}'.format(int(o.amount_total))"/>
-                        <t t-set="decamount" t-value="str(o.amount_total).split('.')[1]" />
-                    </t>
-                    <t t-if="'not amount_total' in o.fields_get()">
-                        <t t-set="intamount" t-value="0"/>
-                        <t t-set="decamount" t-value="0"/>
-                    </t>
+                        <!--<t t-set="decamount" t-value="int(split_amount_total[1])" />-->
+                        <t t-set="decamount" t-value="'{:.2f}'.format(round(o.amount_total, 4)).rsplit('.')[1]"/>
+                    <!--</t>-->
+                    <!--<t t-if="'not amount_total' in o.fields_get()">
+                        <t t-set="intamount" t-value="00"/>
+                        <t t-set="decamount" t-value="00"/>
+                    </t>-->
                     <!-- <t t-set="left-dez-pos-hor"/> vorbereitung für positionierung -->
                     <!-- <div t-att-style="'font-family: OCR-B; font-size:12pt; position: absolute; top: ' + str(48 + company.bvr_ammount_delta_horz or 0) + 'mm; left: ' + str(-6 + company.bvr_ammount_left_delta_vert) + 'mm; width:40mm; text-align: right;'"> -->
                     <!-- t-att-style='"height: " + Math.ceil(widget.fill * 100) + "%;"' -->

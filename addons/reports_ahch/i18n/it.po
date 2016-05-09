@@ -16,11 +16,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: reports_ahch
-#: view:website:reports_ahch.report_layout_ahch_basic_footer
-msgid "&bull;"
-msgstr "&bull;"
-
-#. module: reports_ahch
 #: view:website:reports_ahch.invoice_ahch_document
 msgid "Amount"
 msgstr "Importo"
@@ -176,11 +171,13 @@ msgstr "Invoice Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice address:"
 msgstr "Indirizzo fatturazione:"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice and shipping address:"
 msgstr "Indirizzo di fatturazione e di spedizione:"
 
@@ -201,6 +198,7 @@ msgstr "Data Ordine:"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Order N°"
 msgstr "Ordine N°"
 
@@ -242,6 +240,7 @@ msgstr "Postfinance Account Number"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Price"
 msgstr "Prezzo"
 
@@ -279,6 +278,7 @@ msgstr "Data Preventivo:"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Quotation N°"
 msgstr "Preventivo N°"
 
@@ -299,6 +299,7 @@ msgstr "Saleorder Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Salesperson:"
 msgstr "Commerciale:"
 
@@ -310,6 +311,7 @@ msgstr "Data pianificata"
 #. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Shipping address:"
 msgstr "Indirizzo di spedizione:"
 
@@ -352,6 +354,11 @@ msgstr "Note di Credito Fornitori"
 #: view:website:reports_ahch.invoice_ahch_document
 msgid "Tax"
 msgstr "Imposta"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Invoice Date:"
+msgstr "Data di fattura"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.invoice_ahch_document

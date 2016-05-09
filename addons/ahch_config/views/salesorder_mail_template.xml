@@ -6,10 +6,10 @@
         <!-- OVERWRITE: sale.order portal email template  -->
         <record id="portal_sale.email_template_edi_sale" model="email.template">
             <field name="name">Bestellungsvorlage - gesendet via E-Mail (Portal) OVERWRITE</field>
-            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <webshop@aids.ch>' or '"Aids-Hilfe" <webshop@aids.ch>')|safe}]]></field>
+            <field name="email_from"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <shop@aids.ch>' or '"Aids-Hilfe" <shop@aids.ch>')|safe}]]></field>
             <field name="subject">${(object.cat_root_id.id == 80 and 'SEXUELLE GESUNDHEIT' or 'Aids-Hilfe' )|safe} Bestellung ${object.name or ''}</field>
             <field name="partner_to">${object.partner_invoice_id.id}</field>
-            <field name="reply_to"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <webshop@aids.ch>' or '"Aids-Hilfe" <webshop@aids.ch>')|safe}]]></field>
+            <field name="reply_to"><![CDATA[${(object.cat_root_id.id == 80 and '"SEXUELLE GESUNDHEIT" <shop@aids.ch>' or '"Aids-Hilfe" <shop@aids.ch>')|safe}]]></field>
             <field name="model_id" ref="sale.model_sale_order"/>
             <field name="auto_delete" eval="True"/>
             <!--<field name="report_template" ref="sale.report_sale_order"/>-->

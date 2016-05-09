@@ -180,11 +180,13 @@ msgstr "Invoice Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice address:"
 msgstr "Rechnungsanschrift:"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Invoice and shipping address:"
 msgstr "Rechnungs- und Lieferanschrift:"
 
@@ -246,6 +248,7 @@ msgstr "Postfinance Account Number"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Price"
 msgstr "Verkaufspreis"
 
@@ -303,6 +306,7 @@ msgstr "Saleorder Report AHCH"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Salesperson:"
 msgstr "Verkäufer:"
 
@@ -314,6 +318,7 @@ msgstr "Geplantes Datum"
 #. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
 #: view:website:reports_ahch.saleorder_ahch_document
+#: view:website:reports_ahch.invoice_ahch_document
 msgid "Shipping address:"
 msgstr "Versandadresse:"
 
@@ -359,10 +364,15 @@ msgstr "Steuer"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.invoice_ahch_document
+msgid "Invoice Date:"
+msgstr "Rechnungsdatum"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
 #: view:website:reports_ahch.purchaseorder_ahch_document
 #: view:website:reports_ahch.saleorder_ahch_document
 msgid "Taxes"
-msgstr "Umsatzsteuer"
+msgstr "Mehrwertsteuer"
 
 #. module: reports_ahch
 #: help:res.company,logo_report_dd:0
