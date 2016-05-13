@@ -20,7 +20,7 @@
                 ]]>
                 </style> <!-- <p style="font-family: bvrocrb;">BVROCRB</p> -->
 
-                    <div style="font-family: 'Helvetica'; font-size:9pt; position: absolute; top: 10mm; left: 0mm; line-height: 1.2em;">
+                    <div style="font-family: 'Helvetica'; font-size:9pt; position: absolute; top: 25mm; left: 0mm; line-height: 1.2em;">
                         <span t-field="company.name"/><br/>
                         <span t-field="company.street"/><br/>
                         <span t-field="company.zip"/>
@@ -34,7 +34,7 @@
                     <!--<div style="font-size:12px; text-align:right; font-family: 'OCR-B'; position: absolute; top: 40mm; left: 20mm">-->
                         <span t-field="company.bank_ids.esr_customer_number"/>
                     </div>
-                    <div style="font-family: 'Helvetica'; font-size:9pt; position: absolute; top: 10mm; left: 60mm; line-height: 1.2em;">
+                    <div style="font-family: 'Helvetica'; font-size:9pt; position: absolute; top: 25mm; left: 60mm; line-height: 1.2em;">
                         <span t-field="company.name"/><br/>
                         <span t-field="company.street"/><br/>
                         <span t-field="company.zip"/>
