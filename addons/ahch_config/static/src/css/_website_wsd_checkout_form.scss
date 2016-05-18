@@ -81,11 +81,12 @@ body {
 
   .nav-tabs {
     text-align: left;
-        border-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0px !important;
   }
 
   .tab-content {
-    /*height: auto !important;*/
+    height: 180px !important;
     padding: 20px;
     max-width: none;
     background: rgba(211, 211, 211, 0.15);

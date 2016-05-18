@@ -678,9 +678,10 @@ body {
   border: 0 !important; }
 #payment_method .nav-tabs {
   text-align: left;
-  border-bottom: 0; }
+  border-bottom: 0;
+  padding-bottom: 0px !important; }
 #payment_method .tab-content {
-  /*height: auto !important;*/
+  height: 180px !important;
   padding: 20px;
   max-width: none;
   background: rgba(211, 211, 211, 0.15);
@@ -745,6 +746,8 @@ body[data-last-visited-rootcatid="80"] .checkout_steps_indicator {
     color: #aaa; }
   body[data-last-visited-rootcatid="80"] .checkout_steps_indicator li.disabled.active a {
     color: #666; }
+body[data-last-visited-rootcatid="80"] #payment_method .nav-tabs {
+  padding-bottom: 0px !important; }
 body[data-last-visited-rootcatid="80"] .nav-tabs > li > a {
   border: 0;
   border-radius: 0; }
