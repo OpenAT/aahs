@@ -73,7 +73,7 @@
                             </div>
                             </p>
 
-                            <table class="table table-condensed">
+                            <table class="table table-condensed" style="font-size:12px">
                                 <thead>
                                     <tr>
                                         <th>Artikel</th>
@@ -109,7 +109,7 @@
                                 </tbody>
                             </table>
 
-                            <div class="row">
+                            <div class="row" style="font-size:12px;">
                                 <div class="col-xs-4 pull-right">
                                     <table class="table table-condensed">
                                         <tr class="border-black">
