@@ -9,6 +9,31 @@ body[data-last-visited-rootcatid="80"] {
     color: $santered;
   }
 */
+    .small_cart .glyphicon-remove {
+    top: -2px;
+  }
+#cart_products .glyphicon-remove:before {
+  content: "\e020";
+}
+#order_delivery.text-muted {
+  color: black !important;
+}
+
+  .pagination {
+    a {
+      color: $santered;
+    }
+    :visited {
+      color: rgb(68,68,68);
+
+     }
+  }
+.pagination > .active > a {
+  color: white;
+  background-color: $santered;
+  border-color: $santered;
+}
+
   #wsd_checkout_page_right_column .text-muted > a {
     float: left;
   }
@@ -19,6 +44,18 @@ body[data-last-visited-rootcatid="80"] {
       float: left;
   }
 
+    .small_cart .oe_website_spinner {
+      float: left;
+
+      width: auto !important;
+      padding: initial !important;
+
+  }
+    .small_cart .text-muted > span {
+      color: black;
+      float: left;
+      margin-right: 2px;
+  }
     @media ( max-width: 400px ) { // workaround only needed if IFRAME ist used //
     .oe_product.oe_list .oe_product_image img {
       max-height: 160px !important;
@@ -376,8 +413,9 @@ ul.cat_menu > li {
 }
 
 .oe_product .oe_product_image img {
-  height: auto !important;
-  //width: auto;
+  /*height: auto !important;*/
+  height: 130px;
+  width: auto;
   bottom: inherit;
   max-height: none;
   max-width: none;
@@ -386,6 +424,8 @@ ul.cat_menu > li {
 
 .oe_product .oe_product_image img:hover {
   height: auto;
+  height: 130px;
+
   //width: auto;
   max-height: none;
   max-width: none;
@@ -397,4 +437,11 @@ ul.cat_menu > li {
         height: 380px;
       }
     }
+
+    #wsd-checkout-box img.product-image {
+    border: none !important;
+    border-radius: 0px;
+    width: auto;
+    height: 160px;
+  }
 }
