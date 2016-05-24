@@ -39,6 +39,7 @@ Use this Addon as a Base for all Customer specific Modifications containing:
         'sale',
         'portal_sale',
         'website',
+        'website_sale',
         'website_sale_donate',
     ],
     'data': [
