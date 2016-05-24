@@ -10,6 +10,18 @@ body[data-last-visited-rootcatid="55"] {
     width: 100%;
     max-width: 960px;
   }
+
+  #product_data {
+    /*float: right;*/
+      display: -webkit-inline-box;
+    > div {
+      text-align: right;
+          margin-right: 3px;
+    }
+    .field_label {
+      font-weight: bold;
+    }
+  }
   .small_cart .glyphicon-remove {
     top: -2px;
   }
@@ -326,13 +338,23 @@ body[data-last-visited-rootcatid="55"] {
   }
 
   .oe_product .text-info.oe_subdescription {
-    display: none;
+    /*display: none;*/
+    color: black;
+    line-height: 1.2;
+  }
+
+    #product_detail {
+    .text-info {
+      color: black;
+      margin-bottom: 20px;
+    }
   }
 
   .oe_list .text-info.oe_subdescription {
     display: block;
     font: 12px/1.518em Arial,Helvetica,sans-serif;
     color: black;
+    min-height: 80px;
   }
   .oe_list.oe_product section {
     height: auto;

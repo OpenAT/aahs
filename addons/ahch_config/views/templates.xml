@@ -42,5 +42,23 @@
             </xpath>
         </template>
 
-    </data>
+        <template id="aahs_product_grid_description" inherit_id="website_sale.products_item">
+            <xpath expr="//div[@class='text-info oe_subdescription']" position="replace">
+               <div class="text-info oe_subdescription" contenteditable="false">
+                 <div itemprop="description" t-field="product.description">
+                 </div>
+               </div>
+            </xpath>
+        </template>
+
+        <template id="aahs_productpage_description_extended" inherit_id="website_sale_donate.ppt_ahch">
+            <xpath expr="//div[@id='product_desc_short']" position="before">
+               <div class="text-info oe_subdescription" contenteditable="false">
+                 <div itemprop="description" t-field="product.description">
+                 </div>
+               </div>
+            </xpath>
+        </template>
+
+</data>
 </openerp>

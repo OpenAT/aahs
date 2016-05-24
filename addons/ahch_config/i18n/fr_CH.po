@@ -506,3 +506,8 @@ msgstr "${(object.cat_root_id.id == 80 and 'SANTE SEXUELLE Suisse' or 'Aide Suis
 #: model:email.template,subject:website_sale_donate.email_template_webshop
 msgid "${(object.cat_root_id.id == 80 and 'SEXUELLE GESUNDHEIT' or 'Aids-Hilfe' )|safe} Vorgangsübersicht ${object.name or ''}"
 msgstr "${(object.cat_root_id.id == 80 and 'SANTE SEXUELLE Suisse' or 'Aide Suisse contre le Sida' )|safe} processus ${object.name or ''}"
+
+#. module: website_sale_donate
+#: view:website:website_sale_donate.ppt_ahch
+msgid "You can download this item right after the checkout process!"
+msgstr "Vous pouvez télécharger cet article juste après le processus de commande!"

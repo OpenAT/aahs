@@ -1,6 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* ahch_config
+#  * ahch_config
+#  * website_sale_doante
 #
 msgid ""
 msgstr ""
@@ -504,3 +505,7 @@ msgstr "${(object.cat_root_id.id == 80 and 'SALUTE SESSUALE Svizzera' or 'Aiuto 
 msgid "${(object.cat_root_id.id == 80 and 'SEXUELLE GESUNDHEIT' or 'Aids-Hilfe' )|safe} Vorgangsübersicht ${object.name or ''}"
 msgstr "${(object.cat_root_id.id == 80 and 'SALUTE SESSUALE Svizzera' or 'Aiuto Aids Svizzero' )|safe} processo ${object.name or ''}"
 
+#. module: website_sale_donate
+#: view:website:website_sale_donate.ppt_ahch
+msgid "You can download this item right after the checkout process!"
+msgstr "È possibile scaricare l'articolo subito dopo il processo di checkout!"
