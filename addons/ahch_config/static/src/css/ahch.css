@@ -200,7 +200,7 @@ body[data-last-visited-rootcatid="55"] {
   body[data-last-visited-rootcatid="55"] .fa-shopping-cart:before {
     /*content: "\f16b";*/
     content: "\f07a"; }
-  body[data-last-visited-rootcatid="55"] .js_sale .btn-primary {
+  body[data-last-visited-rootcatid="55"] .btn-primary {
     color: white;
     background-color: #d70f41;
     border-color: black; }
@@ -500,7 +500,7 @@ body[data-last-visited-rootcatid="80"] {
   body[data-last-visited-rootcatid="80"] .fa-shopping-cart:before {
     color: #545454;
     content: "\f16b"; }
-  body[data-last-visited-rootcatid="80"] .js_sale .btn-primary {
+  body[data-last-visited-rootcatid="80"] .btn-primary {
     color: white;
     background-color: #bf2221;
     border-color: #545454; }
