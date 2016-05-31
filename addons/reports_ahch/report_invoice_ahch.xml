@@ -40,7 +40,7 @@
                                         <strong t-if="o.wsd_so_id.partner_shipping_id != o.wsd_so_id.partner_invoice_id">Shipping address:</strong><br></br>
                                         <!-- <div t-field="o.wsd_so_id.partner_shipping_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;], &quot;no_marker&quot;: true}"/>-->
                                         <t t-if="o.wsd_so_id.partner_shipping_id.company_name_web"><span t-field="o.wsd_so_id.partner_shipping_id.company_name_web"/><br></br></t>
-                                        <t t-if="o.wsd_so_id.partner_shipping_id.title"><span t-field="o.wsd_so_id.partner_shipping_id.title" /> <span t-field="o.wsd_so_id.partner_shipping_id.name"/><br></br></t>
+                                        <t t-if="o.wsd_so_id.partner_shipping_id.title"><span t-field="o.wsd_so_id.partner_shipping_id.title" /></t> <span t-field="o.wsd_so_id.partner_shipping_id.name"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.street" /> <span t-field="o.wsd_so_id.partner_shipping_id.street_number_web"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.wsd_so_id.partner_shipping_id.city"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.country_id.name"/>
