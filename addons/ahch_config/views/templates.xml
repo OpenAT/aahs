@@ -13,7 +13,7 @@
             </xpath>
         </template>
 
-        <!-- Add small cart to shop/confirmation_static -->
+        <!-- Add small cart to shop/confirmation_static (dankesseite nach der zahlung) -->
         <template id="confirmation_static_aahs" inherit_id="website_sale_donate.confirmation_static" name="Confirmation Static AAHS">
             <xpath expr="//h1[@class='payment_status']" position="after">
                 <t t-call="website_sale_donate.small_cart">
@@ -23,6 +23,35 @@
                 </t>
             </xpath>
         </template>
+
+        <!-- SHOW DOWNLOAD LINKS -->
+        <!-- Product Page Checkout Box -->
+            <!-- HINT: enabled by default ! -->
+        <!-- Product Page Checkout Box Small Cart -->
+        <template id="download_link_checkout_box_small_cart" inherit_id="website_sale_donate.checkoutbox" name="Download Buttons Checkout Box Small Cart AAHS">
+            <xpath expr="//t[@t-call='website_sale_donate.checkoutbox_small_cart']" position="inside">
+                    <t t-set="show_download_links" t-value="True"/>
+            </xpath>
+        </template>
+        <!-- Checkout Page Small Cart -->
+        <template id="download_link_checkout_page_small_cart" inherit_id="website_sale_donate.wsd_checkout" name="Download Buttons Checkout Page Small Cart AAHS">
+            <xpath expr="//t[@t-call='website_sale_donate.small_cart']" position="inside">
+                    <t t-set="show_download_links" t-value="True"/>
+            </xpath>
+        </template>
+        <!-- Shop Grid Small Cart -->
+        <template id="download_link_shop_grid_small_cart" inherit_id="website_sale_donate.products_cart" name="Download Buttons Shop Grid Left Side Small Cart AAHS">
+            <xpath expr="//t[@t-call='website_sale_donate.small_cart']" position="inside">
+                    <t t-set="show_download_links" t-value="True"/>
+            </xpath>
+        </template>
+        <!-- Shop Grid Quick Download Buttons -->
+        <template id="download_link_shop_grid_item" inherit_id="website_sale_donate.products_cart" name="Download Buttons Shop Grid Left Side Small Cart AAHS">
+            <xpath expr="//t[@t-call='website_sale_donate.small_cart']" position="inside">
+                    <t t-set="show_download_links" t-value="True"/>
+            </xpath>
+        </template>
+
 
         <!-- Add Custom Google Analytics Code -->
         <template id="aahs_google_analytics" inherit_id="website.layout" name="aahs google analytics code">
