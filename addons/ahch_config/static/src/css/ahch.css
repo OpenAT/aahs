@@ -66,6 +66,15 @@ a {
 #wsd_checkout_steps_nav > div > div > a.btn.btn-primary.navbar-btn {
   display: none; }
 
+/*
+#products_grid_before.col-md-3 {
+  width: 33% !important;
+}
+
+#products_grid.col-md-9 {
+  width: 67% !important;
+}
+*/
 header .navbar {
   font-size: 14px; }
 
@@ -160,7 +169,7 @@ body[data-last-visited-rootcatid="55"] {
     body[data-last-visited-rootcatid="55"] #products_grid .oe_product.oe_list {
       width: 400px; } }
   @media (min-width: 959px) {
-    body[data-last-visited-rootcatid="55"] .col-md-3 {
+    body[data-last-visited-rootcatid="55"] #products_grid_before.col-md-3 {
       width: 25%;
       float: left; }
     body[data-last-visited-rootcatid="55"] .wsd_checkout_page_content #wsd_checkout_page_right_column {
@@ -178,7 +187,7 @@ body[data-last-visited-rootcatid="55"] {
     right: auto; } }
 
   @media (min-width: 959px) {
-    body[data-last-visited-rootcatid="55"] .col-md-9 {
+    body[data-last-visited-rootcatid="55"] #products_grid_before.col-md-9 {
       width: 75% !important;
       float: left !important; } }
   body[data-last-visited-rootcatid="55"] .fa-shopping-cart:before {
@@ -242,7 +251,6 @@ body[data-last-visited-rootcatid="55"] {
     margin: 0 0 1em 0; }
   body[data-last-visited-rootcatid="55"] ul.cat_menu > li > ul > li > a:before {
     display: inline-block;
-    content: "\f05a";
     font-family: FontAwesome !important;
     /*font: normal normal normal 18px/1 FontAwesome;*/
     font-size: 1.8em;
@@ -352,6 +360,19 @@ body[data-last-visited-rootcatid="55"] {
     border-radius: 0px;
     width: auto;
     height: 160px; }
+  body[data-last-visited-rootcatid="55"] #products_grid_before > ul > li > ul > li > a:before {
+    content: "";
+    display: inline-block;
+    background: url("/ahch_config/static/src/img/icon.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 0 2px 0 0;
+    vertical-align: sub; }
+  body[data-last-visited-rootcatid="55"] #products_grid_before > ul > li > a {
+    display: none; }
+  body[data-last-visited-rootcatid="55"] #products_grid_before.col-md-3 {
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
 
 body[data-last-visited-rootcatid="80"] {
   /*
