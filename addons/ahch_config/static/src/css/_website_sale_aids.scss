@@ -98,15 +98,17 @@ body[data-last-visited-rootcatid="55"] {
   }
 
   @media (max-width: 500px) {
-    .oe_cart table td:nth-child(2),
+    .oe_cart table td:nth-child(2) {
+      border-top-style: none;
+    }
     #modal_optional_products table td:nth-child(2) {
       border-top-width: thin;
     }
-    .small_cart table {
-      width: 100%;
-      max-width: 100%;
-
-    }
+//    .small_cart table {
+//      width: 100%;
+//      max-width: 100%;
+//
+//    }
 //    .wsd_payment_page_content {
 //      #cart_products {
 //        td {

@@ -177,12 +177,10 @@ body[data-last-visited-rootcatid="55"] {
         background: transparent;
         padding: 0 !important; } }
   @media (max-width: 500px) {
-    body[data-last-visited-rootcatid="55"] .oe_cart table td:nth-child(2),
+    body[data-last-visited-rootcatid="55"] .oe_cart table td:nth-child(2) {
+      border-top-style: none; }
     body[data-last-visited-rootcatid="55"] #modal_optional_products table td:nth-child(2) {
-      border-top-width: thin; }
-    body[data-last-visited-rootcatid="55"] .small_cart table {
-      width: 100%;
-      max-width: 100%; } }
+      border-top-width: thin; } }
   @media (min-width: 959px) {
     body[data-last-visited-rootcatid="55"] .col-md-3 {
       width: 25%;
