@@ -23,3 +23,11 @@ select.form-control[name="shipping_country_id"] {
     display: none;
   }
 }
+
+
+#products_grid_before > div.text-left.small_cart_buttons {
+  margin-bottom: 4em;
+}
+#products_grid_before > ul > li > a {
+  margin-bottom: 1em;
+}
