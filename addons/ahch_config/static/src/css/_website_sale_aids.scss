@@ -75,6 +75,7 @@ body[data-last-visited-rootcatid="55"] {
     }
     .oe_product .oe_product_image img {
       max-height: 160px !important;
+      position: initial;
     }
     .oe_product .oe_product_image {
       position: initial;
@@ -85,12 +86,15 @@ body[data-last-visited-rootcatid="55"] {
       padding-top: 175px;
       width: 100%;
       background: transparent;
-    }
+      padding: 0 !important;
+      }
+ /*
     #products_grid {
       .oe_product.oe_list {
         width: 400px;
       }
     }
+ */
   }
 
   @media (max-width: 500px) {
