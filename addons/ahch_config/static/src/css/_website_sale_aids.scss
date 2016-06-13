@@ -142,7 +142,7 @@ body[data-last-visited-rootcatid="55"] {
 
 
   @media (min-width: 959px) {
-    #products_grid_before.col-md-3 {
+    .col-md-3 {
       width: 25%;
       float: left;
     }
@@ -171,7 +171,7 @@ body[data-last-visited-rootcatid="55"] {
   }
 
   @media (min-width: 959px) {
-    #products_grid_before.col-md-9 {
+    .col-md-9 {
       width: 75% !important;
       float: left !important;
     }
