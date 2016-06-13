@@ -68,7 +68,7 @@ body[data-last-visited-rootcatid="55"] {
   //  margin-right: 2px;
   //}
 
- /* @media (max-width: 400px) {
+  @media (max-width: 400px) {
     // workaround only needed if IFRAME ist used //
     .oe_product.oe_list .oe_product_image img {
       max-height: 160px !important;
@@ -91,7 +91,7 @@ body[data-last-visited-rootcatid="55"] {
         width: 400px;
       }
     }
-  }*/
+  }
 
   @media (max-width: 500px) {
     .oe_cart table td:nth-child(2),
