@@ -1,3 +1,25 @@
 .ppt_opc #wsd-checkout-box img.product-image {
   width: auto !important;
 }
+
+// Disable Countries
+select.form-control[name="country_id"],
+select.form-control[name="shipping_country_id"] {
+  // Hide all countries
+  option {
+    display: none;
+  }
+  // Show country "Schweiz"
+  option[value="44"] {
+    display: inherit;
+  }
+}
+
+// Hide unwanted address fields at payment-page right column
+.billing_address,
+.shipping_address {
+  .email,
+  .phone {
+    display: none;
+  }
+}

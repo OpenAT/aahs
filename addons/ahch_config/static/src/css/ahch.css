@@ -72,6 +72,19 @@ header .navbar {
 .ppt_opc #wsd-checkout-box img.product-image {
   width: auto !important; }
 
+select.form-control[name="country_id"] option,
+select.form-control[name="shipping_country_id"] option {
+  display: none; }
+select.form-control[name="country_id"] option[value="44"],
+select.form-control[name="shipping_country_id"] option[value="44"] {
+  display: inherit; }
+
+.billing_address .email,
+.billing_address .phone,
+.shipping_address .email,
+.shipping_address .phone {
+  display: none; }
+
 body[data-last-visited-rootcatid="55"] {
   font-family: 'CorporateARegular', Georgia, "Times New Roman", Times, serif;
   font-size: 17.6000003814697px;
