@@ -407,6 +407,8 @@ body[data-last-visited-rootcatid="55"] {
   body[data-last-visited-rootcatid="55"] #products_grid_before.col-md-3 {
     padding-left: 0px !important;
     padding-right: 0px !important; }
+  body[data-last-visited-rootcatid="55"] .btn-link.information-modal-box-trigger {
+    color: #d70f41; }
 
 body[data-last-visited-rootcatid="80"] {
   /*
@@ -672,6 +674,8 @@ body[data-last-visited-rootcatid="80"] {
     border-radius: 0px;
     width: auto;
     height: 160px; }
+  body[data-last-visited-rootcatid="80"] .btn-link.information-modal-box-trigger {
+    color: #bf2221; }
 
 body[data-last-visited-rootcatid="80"] {
   line-height: 1.618em;
