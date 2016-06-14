@@ -179,8 +179,13 @@ body[data-last-visited-rootcatid="55"] {
   @media (max-width: 500px) {
     body[data-last-visited-rootcatid="55"] .oe_cart table td:nth-child(2) {
       border-top-style: none; }
-    body[data-last-visited-rootcatid="55"] #modal_optional_products table td:nth-child(2) {
-      border-top-width: thin; } }
+    body[data-last-visited-rootcatid="55"] .oe_cart table td:first-child {
+      display: block; }
+    body[data-last-visited-rootcatid="55"] .oe_cart.small_cart a[name="product_name"] {
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+      margin-right: 0.5em;
+      display: block; } }
   @media (min-width: 959px) {
     body[data-last-visited-rootcatid="55"] .col-md-3 {
       width: 25%;
