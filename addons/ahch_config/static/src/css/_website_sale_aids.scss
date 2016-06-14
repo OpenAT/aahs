@@ -99,18 +99,38 @@ body[data-last-visited-rootcatid="55"] {
 
   @media (max-width: 500px) {
     .oe_cart table td:nth-child(2) {
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+    .oe_cart table#cart_total td:nth-child(2) {
       border-top-style: none;
     }
     .oe_cart table td:first-child {
-      display: block;
+      //display: block;
+     // width: 50% !important;
     }
+    /*.oe_cart table td:last-child {
+      width: 25% !important;
+    }
+    .oe_cart table td:nth-last-child(2) {
+      width: 25% !important;
+    }*/
     .oe_cart.small_cart a[name="product_name"] {
-      padding-top: 0.25em;
+      /*padding-top: 0.25em;
       padding-bottom: 0.25em;
       margin-right: 0.5em;
+      display: block;*/
+    }
+    .oe_cart table tr {
+      float: initial;
+      width: inherit;
       display: block;
     }
-
+    .oe_cart table td {
+      float: none;
+      width: auto;
+      display: table-cell !important;
+    }
 //    #modal_optional_products table td {
 //      &:last-child {
 //

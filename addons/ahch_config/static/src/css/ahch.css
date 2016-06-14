@@ -177,15 +177,31 @@ body[data-last-visited-rootcatid="55"] {
         background: transparent;
         padding: 0 !important; } }
   @media (max-width: 500px) {
-    body[data-last-visited-rootcatid="55"] .oe_cart table td:nth-child(2) {
-      border-top-style: none; }
-    body[data-last-visited-rootcatid="55"] .oe_cart table td:first-child {
-      display: block; }
-    body[data-last-visited-rootcatid="55"] .oe_cart.small_cart a[name="product_name"] {
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-      margin-right: 0.5em;
-      display: block; } }
+    body[data-last-visited-rootcatid="55"] {
+      /*.oe_cart table td:last-child {
+        width: 25% !important;
+      }
+      .oe_cart table td:nth-last-child(2) {
+        width: 25% !important;
+      }*/ }
+      body[data-last-visited-rootcatid="55"] .oe_cart table td:nth-child(2) {
+        border-top-style: solid;
+        border-top-width: 1px; }
+      body[data-last-visited-rootcatid="55"] .oe_cart table#cart_total td:nth-child(2) {
+        border-top-style: none; }
+      body[data-last-visited-rootcatid="55"] .oe_cart.small_cart a[name="product_name"] {
+        /*padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        margin-right: 0.5em;
+        display: block;*/ }
+      body[data-last-visited-rootcatid="55"] .oe_cart table tr {
+        float: initial;
+        width: inherit;
+        display: block; }
+      body[data-last-visited-rootcatid="55"] .oe_cart table td {
+        float: none;
+        width: auto;
+        display: table-cell !important; } }
   @media (min-width: 959px) {
     body[data-last-visited-rootcatid="55"] .col-md-3 {
       width: 25%;
@@ -455,6 +471,20 @@ body[data-last-visited-rootcatid="80"] {
       padding-top: 175px;
       width: 100%;
       background: transparent; } }
+  @media (max-width: 500px) {
+    body[data-last-visited-rootcatid="80"] .oe_cart table td:nth-child(2) {
+      border-top-style: solid;
+      border-top-width: 1px; }
+    body[data-last-visited-rootcatid="80"] .oe_cart table#cart_total td:nth-child(2) {
+      border-top-style: none; }
+    body[data-last-visited-rootcatid="80"] .oe_cart table tr {
+      float: initial;
+      width: inherit;
+      display: block; }
+    body[data-last-visited-rootcatid="80"] .oe_cart table td {
+      float: none;
+      width: auto;
+      display: table-cell !important; } }
   @media (min-width: 859px) {
     body[data-last-visited-rootcatid="80"] .col-md-3 {
       width: 25%;
