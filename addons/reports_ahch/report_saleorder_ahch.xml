@@ -23,34 +23,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div style="font-size:18px;" class="col-xs-7">
+                            <span style="font-size:18px;" t-if="o.state not in ['draft','sent']"><strong>Order N°</strong></span>
+                            <span style="font-size:18px;" t-if="o.state in ['draft','sent']"><strong>Quotation N°</strong></span>
+                            <span t-field="o.name"/>
 
-                    <h2>
-                        <span t-if="o.state not in ['draft','sent']">Order N° </span>
-                        <span t-if="o.state in ['draft','sent']">Quotation N° </span>
-                        <span t-field="o.name"/>
-                    </h2>
-
-                    <div class="row mt32 mb32" id="informations">
-                        <div t-if="o.client_order_ref" class="col-xs-3" style="font-size:18px;">
-                            <strong>Your Reference:</strong>
-                            <p t-field="o.client_order_ref"/>
+                            <!-- <div class="row mt32 mb32" id="informations"> -->
+                            <span t-if="o.client_order_ref" style="font-size:18px;"><strong>Your Reference:</strong></span>
+                            <span t-field="o.client_order_ref"/><br></br>
+                            <span style="font-size:12px;" t-if="o.user_id.name"><strong>Salesperson:</strong></span>
+                            <span t-field="o.user_id.name" style="font-size:12px;"/>
                         </div>
-                        <div t-if="o.date_order" class="col-xs-3">
+                        <div t-if="o.date_order" class="col-xs-3" style="float:right;">
+                            <div style="height: 1.4cm;"><![CDATA[&nbsp;]]></div>
                             <strong t-if="o.state not in ['draft','sent']">Date Ordered:</strong>
                             <strong t-if="o.state in ['draft','sent']">Quotation Date:</strong>
                             <p t-field="o.date_order"/>
                         </div>
-                        <div t-if="o.user_id.name" class="col-xs-3">
-                            <strong>Salesperson:</strong>
-                            <p t-field="o.user_id.name"/>
-                        </div>
-                        <div t-if="o.payment_term" class="col-xs-3">
-                            <strong>Payment Term:</strong>
-                            <p t-field="o.payment_term"/>
-                        </div>
+                                <!-- <div t-if="o.payment_term" class="col-xs-3">
+                                    <strong>Payment Term:</strong>
+                                    <p t-field="o.payment_term"/>
+                                </div> -->
+                            <!-- </div> -->
                     </div>
-
-                    <table class="table table-condensed">
+                    <table class="table table-condensed" style="font-size:11px;">
                         <thead>
                             <tr>
                                 <th>Article</th>
@@ -116,7 +113,12 @@
                         <span t-field="o.payment_term.note"/>
                     </p>
                     <div class="oe_structure"/>
-                </div>
+               </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <t t-call="reports_ahch.report_layout_ahch_basic_footer"/>
+                        </div>
+                    </div>
                </t>
         </template>
 

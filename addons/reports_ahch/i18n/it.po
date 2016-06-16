@@ -199,8 +199,8 @@ msgstr "Data Ordine:"
 #. module: reports_ahch
 #: view:website:reports_ahch.saleorder_ahch_document
 #: view:website:reports_ahch.invoice_ahch_document
-msgid "Order N°"
-msgstr "Ordine N°"
+msgid "Order N°:"
+msgstr "Ordine N°:"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
