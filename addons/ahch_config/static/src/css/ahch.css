@@ -75,6 +75,9 @@ a {
   width: 67% !important;
 }
 */
+.wsd_confirmation_page_status .oe_cart.small_cart {
+  display: none; }
+
 header .navbar {
   font-size: 14px; }
 
