@@ -16,20 +16,25 @@
                                 <div class="col-xs-6">
                                     <span t-if="o.wsd_so_id">
                                         <div t-if="o.wsd_so_id.partner_shipping_id != o.wsd_so_id.partner_invoice_id">
-                                            <strong>Invoice address:</strong>
-                                        <div t-field="o.wsd_so_id.partner_invoice_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;title&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>
-                                        <!--<t t-if="o.wsd_so_id.partner_invoice_id.company_name_web"><span t-field="o.wsd_so_id.partner_invoice_id.company_name_web"/><br></br></t>
-                                        <t t-if="o.wsd_so_id.partner_invoice_id.title"><span t-field="o.wsd_so_id.partner_id_invoice_.title" /> <span t-field="o.wsd_so_id.partner_invoice_id.name"/><br></br></t>
+                                            <strong>Invoice address:</strong><br></br>
+                                        <!-- <div t-field="o.wsd_so_id.partner_invoice_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;title&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/> -->
+                                        <t t-if="o.wsd_so_id.partner_invoice_id.company_name_web"><span t-field="o.wsd_so_id.partner_invoice_id.company_name_web"/><br></br></t>
+                                        <t t-if="o.wsd_so_id.partner_invoice_id.gender"><span t-field="o.wsd_so_id.partner_invoice_id.gender" /></t> <t t-if="o.wsd_so_id.partner_shipping_id.title_web"> <span t-field="o.wsd_so_id.partner_shipping_id.title_web"/></t> <span t-field="o.wsd_so_id.partner_invoice_id.name"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_invoice_id.street" /> <span t-field="o.wsd_so_id.partner_invoice_id.street_number_web"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_invoice_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.wsd_so_id.partner_invoice_id.city"/><br></br>
-                                        <span t-field="o.wsd_so_id.partner_invoice_id.country_id.name"/>-->
+                                        <span t-field="o.wsd_so_id.partner_invoice_id.country_id.name"/>
                                         <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
                                         </div>
                                     </span>
                                     <span t-if="not o.wsd_so_id">
                                         <div>
-                                            <strong>Invoice address:</strong>
-                                            <div t-field="o.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;title&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>
+                                            <strong>Invoice address:</strong><br></br>
+                                            <!-- <div t-field="o.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;gender&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/> -->
+                                            <t t-if="o.partner_id.company_name_web"><span t-field="o.partner_id.company_name_web"/><br></br></t>
+                                            <t t-if="o.partner_id.gender"><span t-field="o.partner_id.gender" /></t> <t t-if="o.partner_id.title_web"> <span t-field="o.partner_id.title_web"/></t> <span t-field="o.partner_id.name"/><br></br>
+                                            <span t-field="o.partner_id.street" /> <span t-field="o.partner_id.street_number_web"/><br></br>
+                                            <span t-field="o.partner_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.partner_id.city"/><br></br>
+                                            <span t-field="o.partner_id.country_id.name"/>
                                             <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
                                         </div>
                                     </span>
@@ -40,7 +45,7 @@
                                         <strong t-if="o.wsd_so_id.partner_shipping_id != o.wsd_so_id.partner_invoice_id">Shipping address:</strong><br></br>
                                         <!-- <div t-field="o.wsd_so_id.partner_shipping_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;], &quot;no_marker&quot;: true}"/>-->
                                         <t t-if="o.wsd_so_id.partner_shipping_id.company_name_web"><span t-field="o.wsd_so_id.partner_shipping_id.company_name_web"/><br></br></t>
-                                        <t t-if="o.wsd_so_id.partner_shipping_id.title"><span t-field="o.wsd_so_id.partner_shipping_id.title" /></t> <span t-field="o.wsd_so_id.partner_shipping_id.name"/><br></br>
+                                        <t t-if="o.wsd_so_id.partner_id.gender"><span t-field="o.wsd_so_id.partner_id.gender" /></t> <t t-if="o.wsd_so_id.partner_id.title_web"> <span t-field="o.wsd_so_id.partner_id.title_web"/></t> <span t-field="o.wsd_so_id.partner_shipping_id.name"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.street" /> <span t-field="o.wsd_so_id.partner_shipping_id.street_number_web"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.wsd_so_id.partner_shipping_id.city"/><br></br>
                                         <span t-field="o.wsd_so_id.partner_shipping_id.country_id.name"/>
@@ -49,9 +54,14 @@
                                 </span>
                                 <span t-if="not o.wsd_so_id">
                                    <div class="col-xs-5 col-sx-offset-1">
-                                        <strong>Shipping address:</strong>
-                                        <div t-field="o.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;title&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>
-                                        <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
+                                        <strong>Shipping address:</strong><br></br>
+                                        <!-- <div t-field="o.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;gender&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>-->
+                                            <t t-if="o.partner_id.company_name_web"><span t-field="o.partner_id.company_name_web"/><br></br></t>
+                                            <t t-if="o.partner_id.gender"><span t-field="o.partner_id.gender" /></t> <t t-if="o.partner_id.title_web"> <span t-field="o.partner_id.title_web"/></t> <span t-field="o.partner_id.name"/><br></br>
+                                            <span t-field="o.partner_id.street" /> <span t-field="o.partner_id.street_number_web"/><br></br>
+                                            <span t-field="o.partner_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.partner_id.city"/><br></br>
+                                            <span t-field="o.partner_id.country_id.name"/>
+                                       <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
                                     </div>
                                 </span>
                             </div>

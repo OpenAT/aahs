@@ -20,19 +20,9 @@
 <![CDATA[
 <div style="font-family: Arial, Verdana, sans-serif; font-size: 12px;">
   <p>
-    Guten Tag ${object.partner_id.name}<br/>
+    Guten Tag ${object.partner_id.gender} ${object.partner_id.name}<br/>
     vielen Dank für ihre Bestellung!
   </p>
-  <ul>
-    % for line in object.order_line:
-      % if line.product_id.webshop_download_file:
-          <li><a style="text-decoration: none !important;" href="/web/binary/saveas?model=product.product&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_id.id}">Download: ${line.product_id.webshop_download_file_name}</a></li>
-      % endif
-      % if line.product_tmpl_id.webshop_download_file:
-          <li><a style="text-decoration: none !important;" href="/web/binary/saveas?model=product.template&amp;field=webshop_download_file&amp;filename_field=webshop_download_file_name&amp;id=${line.product_tmpl_id.id}">Download: ${line.product_tmpl_id.webshop_download_file_name}</a></li>
-      % endif
-    % endfor
-  </ul>
   <br/>
   <!-- Aidshilfe Adresse -->
   % if object.cat_root_id.id != 80:
