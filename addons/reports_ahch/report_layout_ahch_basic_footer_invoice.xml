@@ -3,16 +3,16 @@
     <data>
         <!-- <template id="external_layout_header" inherit_id="report.external_layout_header"> -->
         <!-- <xpath expr="//div" position="replace"> -->
-    <template id="report_layout_ahch_basic_footer">
+    <template id="report_layout_ahch_basic_footer_invoice">
         <t t-if ="o and 'company_id' in o">
             <t t-set="company" t-value="o.company_id"/>
             <t t-set="customer" t-value="o.partner_id"/>
         </t>
             <!-- <div class="footer" style="padding:0; margin:0; position: absolute; top: 200mm;"> -->
-            <div class="footer" style="position: absolute; width:100%">
+            <div class="footer" style="position: absolute; width:100%; top: 75mm;">
                 <div class="row" style="font-size:10px;">
                     <t t-if="not company.custom_footer">
-                        <div class="col-xs-4">
+                     <div class="col-xs-4">
                             <span t-if="company.name"/><strong><span t-field="company.name"/></strong><br></br>
                             <span t-if="company.street"/><span t-field="company.street"/><br></br>
                             <span>Postfach 1118</span><br></br>

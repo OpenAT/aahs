@@ -75,6 +75,10 @@ a {
   width: 67% !important;
 }
 */
+.wsd_confirmation_page_status .order_name {
+  display: none; }
+.wsd_confirmation_page_status .payment_status {
+  display: none; }
 .wsd_confirmation_page_status .oe_cart.small_cart {
   display: none; }
 

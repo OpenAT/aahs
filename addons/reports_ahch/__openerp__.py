@@ -39,6 +39,7 @@
         'report_layout_ahch_slip_footer.xml',
         'report_layout_ahch_slip_footer_invoice.xml',
         'report_layout_ahch_basic_footer.xml',
+        'report_layout_ahch_basic_footer_invoice.xml',
         'invoice_reports_ahch_extension.xml',
         'invoice_reports_ahch_bvr_extension.xml',
     ],

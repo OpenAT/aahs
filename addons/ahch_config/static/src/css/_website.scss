@@ -65,6 +65,12 @@ a {
 }
 */
 .wsd_confirmation_page_status {
+  .order_name {
+    display:none;
+  }
+  .payment_status {
+    display:none;
+  }
   .oe_cart.small_cart {
     display: none;
 }

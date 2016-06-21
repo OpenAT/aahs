@@ -10,8 +10,8 @@
                     <div class="oe_structure"/>
                     <div class="row">
                         <div class="col-xs-6">
-                            <strong t-if="o.partner_shipping_id == o.partner_invoice_id">Invoice and shipping address:</strong><br></br>
-                            <strong t-if="o.partner_shipping_id != o.partner_invoice_id">Invoice address:</strong><br></br>
+                            <t t-if="o.partner_shipping_id == o.partner_invoice_id"><strong>Invoice and shipping address:</strong><br></br></t>
+                            <t t-if="o.partner_shipping_id != o.partner_invoice_id"><strong>Invoice address:</strong><br></br></t>
                             <!-- <div t-field="o.partner_invoice_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;], &quot;no_marker&quot;: true}"/> -->
                             <t t-if="o.partner_invoice_id.company_name_web"><span t-field="o.partner_invoice_id.company_name_web"/><br></br></t>
                             <t t-if="o.partner_invoice_id.gender"><span t-field="o.partner_invoice_id.gender" /></t> <t t-if="o.partner_shipping_id.title_web"> <span t-field="o.partner_shipping_id.title_web"/></t> <span t-field="o.partner_invoice_id.name"/><br></br>
@@ -28,28 +28,29 @@
                             <t t-if="o.partner_id.gender"><span t-field="o.partner_id.gender" /></t> <t t-if="o.partner_id.title_web"> <span t-field="o.partner_id.title_web"/></t> <span t-field="o.partner_shipping_id.name"/><br></br>
                             <span t-field="o.partner_shipping_id.street" /> <span t-field="o.partner_shipping_id.street_number_web"/><br></br>
                             <span t-field="o.partner_shipping_id.zip" /><![CDATA[&nbsp;]]><span t-field="o.partner_shipping_id.city"/><br></br>
-                            <span t-field="o.partner_shipping_id.country_id.name"/>
+                            <span t-field="o.partner_shipping_id.country_id.name"/><br></br>
                                 <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div style="font-size:18px;" class="col-xs-7">
-                            <span style="font-size:18px;" t-if="o.state not in ['draft','sent']"><strong>Order N°</strong></span>
-                            <span style="font-size:18px;" t-if="o.state in ['draft','sent']"><strong>Quotation N°</strong></span>
+                        <div style="font-size:18px; margin-top: 15px;" class="col-xs-12">
+                            <span style="font-size:18px;" t-if="o.state not in ['draft','sent']"><strong>Order:</strong></span>
+                            <span style="font-size:18px;" t-if="o.state in ['draft','sent']"><strong>Quotation:</strong></span>
                             <span t-field="o.name"/>
-
+                        </div>
+                        <div t-if="o.date_order" class="col-xs-3">
+                            <!-- <div style="height: 1.4cm;"><![CDATA[&nbsp;]]></div> -->
+                            <strong style="font-size:12px;" t-if="o.state not in ['draft','sent']">Date Ordered:</strong>
+                            <strong style="font-size:12px;" t-if="o.state in ['draft','sent']">Quotation Date:</strong>
+                            <span style="font-size:12px;" t-field="o.date_order" t-field-options='{"format": "dd.MM.yyyy"}'/>
+                        </div>
+                        <div class="col-xs-5">
                             <!-- <div class="row mt32 mb32" id="informations"> -->
-                            <span t-if="o.client_order_ref" style="font-size:18px;"><strong>Your Reference:</strong></span>
-                            <span t-field="o.client_order_ref"/><br></br>
+                            <!-- <span>Page </span><span class="page" /> of <span class="topage" /><br></br>--> <!-- geht nicht inside report geht nur im footer -->
+                            <t t-if="o.client_order_ref" style="font-size:18px;"><strong>Your Reference:</strong><span t-field="o.client_order_ref"/><br></br></t>
                             <span style="font-size:12px;" t-if="o.user_id.name"><strong>Salesperson:</strong></span>
                             <span t-field="o.user_id.name" style="font-size:12px;"/>
-                        </div>
-                        <div t-if="o.date_order" class="col-xs-3" style="float:right;">
-                            <div style="height: 1.4cm;"><![CDATA[&nbsp;]]></div>
-                            <strong t-if="o.state not in ['draft','sent']">Date Ordered:</strong>
-                            <strong t-if="o.state in ['draft','sent']">Quotation Date:</strong>
-                            <p t-field="o.date_order"/>
                         </div>
                                 <!-- <div t-if="o.payment_term" class="col-xs-3">
                                     <strong>Payment Term:</strong>
@@ -57,10 +58,10 @@
                                 </div> -->
                             <!-- </div> -->
                     </div>
-                    <table class="table table-condensed" style="font-size:11px;">
+                    <table class="table table-condensed" style="font-size:11px; margin-top:20px;">
                         <thead>
                             <tr>
-                                <th>Article</th>
+                                <th>Item</th>
                                 <!--<th>Taxes</th>-->
                                 <th class="text-right">Quantity</th>
                                 <th class="text-right">Unit Price</th>

@@ -205,6 +205,16 @@ msgid "Order N°:"
 msgstr "N° de commande:"
 
 #. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Order:"
+msgstr "ordre:"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Order:"
+msgstr "ordre:"
+
+#. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
 msgid "Our Order Reference:"
 msgstr "Our Order Reference:"
@@ -251,6 +261,16 @@ msgstr "Prix"
 #: view:website:reports_ahch.invoice_ahch_document
 msgid "Product"
 msgstr "Article"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.saleorder_ahch_document
+msgid "Item"
+msgstr "article"
+
+#. module: reports_ahch
+#: view:website:reports_ahch.invoice_ahch_document
+msgid "Item"
+msgstr "article"
 
 #. module: reports_ahch
 #: view:website:reports_ahch.purchaseorder_ahch_document
