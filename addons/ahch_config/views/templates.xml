@@ -15,11 +15,16 @@
 
         <!-- Add small cart to shop/confirmation_static (dankesseite nach der zahlung) -->
         <template id="confirmation_static_aahs" inherit_id="website_sale_donate.confirmation_static" name="Confirmation Static AAHS">
-            <xpath expr="//h1[@class='payment_status']" position="after">
-                <t t-call="website_sale_donate.small_cart">
-                    <t t-set="show_download_links" t-value="True"/>
-                    <t t-set="disable_changing_products" t-value="True"/>
-                    <t t-set="website_sale_order" t-value="order"/>
+            <xpath expr="//div[@class='payment_information']" position="after">
+                <t t-if="order.payment_tx_id">
+                    <div class="mini_cart_csp">
+                    <h3>Shop Information</h3>
+                        <t t-call="website_sale_donate.small_cart">
+                            <t t-set="show_download_links" t-value="True"/>
+                            <t t-set="disable_changing_products" t-value="True"/>
+                            <t t-set="website_sale_order" t-value="order"/>
+                        </t>
+                    </div>
                 </t>
             </xpath>
         </template>
